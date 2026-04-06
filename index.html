@@ -4,7 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MedMerge Fundraise Materials</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
   * { margin: 0; padding: 0; box-sizing: border-box; }
   :root {
     --slate: #415F6B;
@@ -14,7 +18,7 @@
     --white: #FFFFFF;
   }
   body {
-    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-family: "Clear Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
     color: var(--slate);
     background: var(--light-bg);
     line-height: 1.6;
@@ -23,7 +27,7 @@
     max-width: 960px;
     margin: 60px auto 0;
     padding: 12px 24px;
-    font-family: "Segoe UI", system-ui, sans-serif;
+    font-family: "Clear Sans", "Segoe UI", system-ui, sans-serif;
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -47,21 +51,24 @@
     overflow: hidden;
   }
   h1 {
-    font-weight: 800;
+    font-family: "Hammersmith One", sans-serif;
+    font-weight: 400;
     font-size: 42px;
     color: var(--slate);
     margin-bottom: 16px;
     letter-spacing: -0.5px;
   }
   h2 {
-    font-weight: 800;
+    font-family: "Hammersmith One", sans-serif;
+    font-weight: 400;
     font-size: 32px;
     color: var(--slate);
     margin-bottom: 24px;
     letter-spacing: -0.3px;
   }
   h3 {
-    font-weight: 800;
+    font-family: "Hammersmith One", sans-serif;
+    font-weight: 400;
     font-size: 22px;
     color: var(--teal);
     margin-bottom: 12px;
@@ -86,12 +93,12 @@
   }
   .slide-number {
     position: absolute; bottom: 20px; right: 30px;
-    font-size: 13px; color: #A0AEB6; font-weight: 800;
+    font-size: 13px; color: #A0AEB6; font-family: "Hammersmith One", sans-serif;
   }
   .logo-mark {
     position: absolute; bottom: 20px; left: 30px;
     font-size: 13px; color: var(--teal);
-    letter-spacing: 2px; text-transform: uppercase; font-weight: 800;
+    letter-spacing: 2px; text-transform: uppercase; font-family: "Hammersmith One", sans-serif;
   }
   .teal-bar {
     position: absolute; top: 0; left: 0;
@@ -102,7 +109,7 @@
   .cover-slide .subtitle { font-size: 22px; color: var(--slate-gray); margin-top: 8px; }
   .cover-date { font-size: 14px; color: #A0AEB6; margin-top: 16px; }
   .stat-row { display: flex; gap: 48px; margin-top: 24px; }
-  .stat-number { font-weight: 800; font-size: 48px; color: var(--teal); line-height: 1.1; }
+  .stat-number { font-family: "Hammersmith One", sans-serif; font-size: 48px; color: var(--teal); line-height: 1.1; }
   .stat-label { font-size: 15px; color: var(--slate-gray); margin-top: 4px; }
   .two-col { display: flex; gap: 48px; margin-top: 16px; }
   .col { flex: 1; }
@@ -140,7 +147,7 @@
   .doc-header h1 { font-size: 28px; color: var(--teal); }
   .doc-header .date { font-size: 13px; color: #A0AEB6; }
   .doc-section-title {
-    font-weight: 800; font-size: 15px; color: var(--teal);
+    font-family: "Hammersmith One", sans-serif; font-size: 15px; color: var(--teal);
     text-transform: uppercase; letter-spacing: 1.5px;
     margin-top: 28px; margin-bottom: 10px;
   }
@@ -159,7 +166,7 @@
   .assumptions strong { color: var(--slate); }
   .pf-table { width: 100%; border-collapse: collapse; margin-top: 8px; margin-bottom: 4px; font-size: 13.5px; }
   .pf-table th {
-    font-weight: 800; font-size: 12px; text-transform: uppercase; letter-spacing: 0.8px;
+    font-family: "Hammersmith One", sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 0.8px;
     color: #A0AEB6; text-align: left; padding: 8px 12px; border-bottom: 2px solid #EAEEF0;
   }
   .pf-table th.num, .pf-table td.num { text-align: right; }
@@ -177,7 +184,7 @@
     justify-content: space-around; text-align: center;
   }
   .summary-stat .label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #A0AEB6; margin-bottom: 4px; }
-  .summary-stat .value { font-weight: 800; font-size: 26px; color: var(--white); }
+  .summary-stat .value { font-family: "Hammersmith One", sans-serif; font-size: 26px; color: var(--white); }
   .summary-stat .sub { font-size: 11px; color: #A0AEB6; margin-top: 2px; }
   .note { font-size: 11px; color: #A0AEB6; margin-top: 6px; line-height: 1.5; }
 
@@ -193,7 +200,7 @@
   }
   .safe-section { margin-bottom: 20px; }
   .safe-section-title {
-    font-weight: 800; font-size: 13px; text-transform: uppercase;
+    font-family: "Hammersmith One", sans-serif; font-size: 13px; text-transform: uppercase;
     letter-spacing: 1.5px; color: var(--teal);
     margin-bottom: 8px; padding-bottom: 4px; border-bottom: 1px solid #EAEEF0;
   }
@@ -226,7 +233,7 @@
   <div class="teal-bar"></div>
   <h1>MedMerge</h1>
   <p class="cover-slide subtitle">Health benefits that work for small hospitals.</p>
-  <p class="cover-date">Confidential &mdash; April 2026</p>
+  <p class="cover-date">Confidential | April 2026</p>
 </div>
 
 <!-- SLIDE 2: The Problem -->
@@ -360,7 +367,7 @@
 <div class="doc-page" style="max-width:800px;">
   <div class="doc-header">
     <h1>MedMerge</h1>
-    <span class="date">Confidential &mdash; April 2026</span>
+    <span class="date">Confidential | April 2026</span>
   </div>
 
   <div class="doc-section-title">Company</div>
@@ -415,8 +422,8 @@
 
 <div class="doc-page">
   <div class="doc-header">
-    <h1 style="font-size:24px;">MedMerge &mdash; Investor Return Illustration</h1>
-    <span class="date">Confidential &mdash; April 2026</span>
+    <h1 style="font-size:24px;">MedMerge | Investor Return Illustration</h1>
+    <span class="date">Confidential | April 2026</span>
   </div>
 
   <div class="doc-section-title">Illustrative Assumptions</div>
@@ -573,10 +580,10 @@
 <div class="doc-page" style="max-width:760px;">
   <div class="safe-header">
     <h1>MedMerge, Inc.</h1>
-    <div class="subtitle">Simple Agreement for Future Equity (SAFE) &mdash; Summary of Terms</div>
+    <div class="subtitle">Simple Agreement for Future Equity (SAFE) | Summary of Terms</div>
   </div>
 
-  <div class="draft-banner">Working Draft &mdash; For Discussion Purposes Only</div>
+  <div class="draft-banner">Working Draft | For Discussion Purposes Only</div>
 
   <div class="safe-section">
     <div class="safe-section-title">Parties</div>
