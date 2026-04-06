@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MedMerge Fundraise Materials</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --slate: #415F6B;
+    --teal: #037676;
+    --slate-gray: #4B5C6B;
+    --light-bg: #F7F8F9;
+    --white: #FFFFFF;
+  }
+  body {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    color: var(--slate);
+    background: var(--light-bg);
+    line-height: 1.6;
+  }
+  .section-divider {
+    max-width: 960px;
+    margin: 60px auto 0;
+    padding: 12px 24px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #A0AEB6;
+    border-top: 2px solid var(--teal);
+  }
+
+  /* ---- PITCH DECK ---- */
+  .slide {
+    width: 960px;
+    height: 540px;
+    margin: 24px auto;
+    background: var(--white);
+    border-radius: 4px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  h1 {
+    font-weight: 800;
+    font-size: 42px;
+    color: var(--slate);
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+  }
+  h2 {
+    font-weight: 800;
+    font-size: 32px;
+    color: var(--slate);
+    margin-bottom: 24px;
+    letter-spacing: -0.3px;
+  }
+  h3 {
+    font-weight: 800;
+    font-size: 22px;
+    color: var(--teal);
+    margin-bottom: 12px;
+  }
+  p, li {
+    font-size: 18px;
+    color: var(--slate-gray);
+    line-height: 1.7;
+  }
+  ul { list-style: none; padding: 0; }
+  ul li {
+    padding: 6px 0 6px 20px;
+    position: relative;
+  }
+  ul li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 14px;
+    width: 8px; height: 8px;
+    background: var(--teal);
+    border-radius: 50%;
+  }
+  .slide-number {
+    position: absolute; bottom: 20px; right: 30px;
+    font-size: 13px; color: #A0AEB6; font-weight: 800;
+  }
+  .logo-mark {
+    position: absolute; bottom: 20px; left: 30px;
+    font-size: 13px; color: var(--teal);
+    letter-spacing: 2px; text-transform: uppercase; font-weight: 800;
+  }
+  .teal-bar {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 4px; background: var(--teal);
+  }
+  .cover-slide { justify-content: flex-end; padding-bottom: 80px; }
+  .cover-slide h1 { font-size: 52px; color: var(--teal); }
+  .cover-slide .subtitle { font-size: 22px; color: var(--slate-gray); margin-top: 8px; }
+  .cover-date { font-size: 14px; color: #A0AEB6; margin-top: 16px; }
+  .stat-row { display: flex; gap: 48px; margin-top: 24px; }
+  .stat-number { font-weight: 800; font-size: 48px; color: var(--teal); line-height: 1.1; }
+  .stat-label { font-size: 15px; color: var(--slate-gray); margin-top: 4px; }
+  .two-col { display: flex; gap: 48px; margin-top: 16px; }
+  .col { flex: 1; }
+  .terms-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 12px 32px; margin-top: 16px;
+  }
+  .term-item { padding: 8px 0; border-bottom: 1px solid #E8ECED; }
+  .term-label-sm { font-size: 13px; color: #A0AEB6; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px; }
+  .term-value-sm { font-size: 18px; color: var(--slate); font-weight: 600; }
+  .pipeline-item {
+    padding: 10px 0; border-bottom: 1px solid #E8ECED;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .pipeline-name { font-size: 18px; color: var(--slate); font-weight: 600; }
+  .pipeline-status {
+    font-size: 14px; color: var(--teal); background: #E8F5F5;
+    padding: 3px 12px; border-radius: 12px;
+  }
+
+  /* ---- DOCUMENT PAGES ---- */
+  .doc-page {
+    max-width: 860px;
+    margin: 24px auto;
+    background: var(--white);
+    border-radius: 4px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 48px 56px;
+  }
+  .doc-header {
+    border-bottom: 3px solid var(--teal);
+    padding-bottom: 16px; margin-bottom: 28px;
+    display: flex; justify-content: space-between; align-items: flex-end;
+  }
+  .doc-header h1 { font-size: 28px; color: var(--teal); }
+  .doc-header .date { font-size: 13px; color: #A0AEB6; }
+  .doc-section-title {
+    font-weight: 800; font-size: 15px; color: var(--teal);
+    text-transform: uppercase; letter-spacing: 1.5px;
+    margin-top: 28px; margin-bottom: 10px;
+  }
+  .doc-page p { font-size: 14px; color: var(--slate-gray); margin-bottom: 10px; line-height: 1.7; }
+  .doc-page ul li { font-size: 14px; padding: 3px 0 3px 14px; }
+  .doc-page ul li::before { width: 5px; height: 5px; top: 10px; }
+  .terms-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  .terms-table td { padding: 7px 0; font-size: 14px; border-bottom: 1px solid #EAEEF0; vertical-align: top; }
+  .terms-table td:first-child { color: #A0AEB6; width: 160px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .terms-table td:last-child { color: var(--slate); font-weight: 600; }
+  .footer { margin-top: 36px; padding-top: 12px; border-top: 1px solid #EAEEF0; font-size: 11px; color: #A0AEB6; text-align: center; }
+
+  /* ---- PRO FORMA ---- */
+  .assumptions { background: var(--light-bg); padding: 16px 20px; border-radius: 4px; margin-bottom: 4px; }
+  .assumptions p { margin-bottom: 3px; font-size: 13px; }
+  .assumptions strong { color: var(--slate); }
+  .pf-table { width: 100%; border-collapse: collapse; margin-top: 8px; margin-bottom: 4px; font-size: 13.5px; }
+  .pf-table th {
+    font-weight: 800; font-size: 12px; text-transform: uppercase; letter-spacing: 0.8px;
+    color: #A0AEB6; text-align: left; padding: 8px 12px; border-bottom: 2px solid #EAEEF0;
+  }
+  .pf-table th.num, .pf-table td.num { text-align: right; }
+  .pf-table td { padding: 7px 12px; border-bottom: 1px solid #EAEEF0; color: var(--slate); }
+  tr.total td { border-top: 2px solid var(--teal); border-bottom: 2px solid var(--teal); font-weight: 700; }
+  .conversion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 12px; }
+  .conversion-card { border: 1px solid #EAEEF0; border-radius: 4px; padding: 20px; }
+  .conversion-card h3 { font-size: 14px; color: var(--teal); margin-bottom: 12px; }
+  .conversion-card table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .conversion-card td { padding: 5px 8px; border-bottom: 1px solid #EAEEF0; }
+  .highlight-row td { background: #E8F5F5; font-weight: 700; color: var(--teal); }
+  .summary-box {
+    background: var(--slate); color: var(--white); padding: 20px 24px;
+    border-radius: 4px; margin-top: 20px; display: flex;
+    justify-content: space-around; text-align: center;
+  }
+  .summary-stat .label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #A0AEB6; margin-bottom: 4px; }
+  .summary-stat .value { font-weight: 800; font-size: 26px; color: var(--white); }
+  .summary-stat .sub { font-size: 11px; color: #A0AEB6; margin-top: 2px; }
+  .note { font-size: 11px; color: #A0AEB6; margin-top: 6px; line-height: 1.5; }
+
+  /* ---- SAFE ---- */
+  .safe-header { text-align: center; border-bottom: 3px solid var(--teal); padding-bottom: 20px; margin-bottom: 8px; }
+  .safe-header h1 { font-size: 24px; color: var(--teal); margin-bottom: 4px; }
+  .safe-header .subtitle { font-size: 14px; color: #A0AEB6; }
+  .draft-banner {
+    background: #FFF8E7; border: 1px solid #E6D5A8; color: #8B7340;
+    text-align: center; padding: 8px 16px; font-size: 12px;
+    text-transform: uppercase; letter-spacing: 1px;
+    margin-top: 16px; margin-bottom: 24px; border-radius: 4px;
+  }
+  .safe-section { margin-bottom: 20px; }
+  .safe-section-title {
+    font-weight: 800; font-size: 13px; text-transform: uppercase;
+    letter-spacing: 1.5px; color: var(--teal);
+    margin-bottom: 8px; padding-bottom: 4px; border-bottom: 1px solid #EAEEF0;
+  }
+  .term-row { display: flex; padding: 6px 0; border-bottom: 1px solid #F3F4F5; font-size: 14px; }
+  .term-label { width: 200px; flex-shrink: 0; color: #A0AEB6; font-size: 13px; }
+  .term-value { flex: 1; color: var(--slate); }
+  .term-value p { margin-bottom: 6px; font-size: 14px; }
+  .bracket { color: var(--teal); font-weight: 600; }
+  .signature-block { margin-top: 40px; display: flex; gap: 60px; }
+  .sig-col { flex: 1; }
+  .sig-col .sig-label { font-size: 12px; color: #A0AEB6; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 40px; }
+  .sig-line { border-top: 1px solid var(--slate); padding-top: 6px; font-size: 13px; color: var(--slate-gray); margin-bottom: 16px; }
+
+  @media print {
+    body { background: white; }
+    .slide, .doc-page { box-shadow: none; page-break-inside: avoid; }
+    .section-divider { page-break-before: always; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- SECTION 1: PITCH DECK                                        -->
+<!-- ============================================================ -->
+<div class="section-divider">Section 1 of 4: Pitch Deck</div>
+
+<!-- SLIDE 1: Cover -->
+<div class="slide cover-slide">
+  <div class="teal-bar"></div>
+  <h1>MedMerge</h1>
+  <p class="cover-slide subtitle">Health benefits that work for small hospitals.</p>
+  <p class="cover-date">Confidential &mdash; April 2026</p>
+</div>
+
+<!-- SLIDE 2: The Problem -->
+<div class="slide">
+  <div class="teal-bar"></div>
+  <h2>The Problem</h2>
+  <p style="font-size:20px;margin-bottom:24px;">Small and rural hospitals face a benefits crisis that no one is solving.</p>
+  <ul>
+    <li>Health plan costs are rising 8 to 12 percent annually for employers with fewer than 500 lives</li>
+    <li>Fully insured carriers dictate pricing, network access, and plan design with no transparency</li>
+    <li>Self-funded alternatives require infrastructure that small hospitals do not have</li>
+    <li>The result: these employers overpay, lose employees, and have no leverage to change it</li>
+  </ul>
+  <span class="logo-mark">MedMerge</span>
+  <span class="slide-number">2</span>
+</div>
+
+<!-- SLIDE 3: The Solution -->
+<div class="slide">
+  <div class="teal-bar"></div>
+  <h2>What MedMerge Built</h2>
+  <p style="font-size:20px;margin-bottom:24px;">A single employer health plan chassis, purpose-built for small hospitals.</p>
+  <ul>
+    <li>Fully compliant plan structure that took 18 months to design and build</li>
+    <li>Each employer gets its own plan with transparent pricing, no pooled risk with strangers</li>
+    <li>MedMerge handles administration, compliance, and network access</li>
+    <li>Employers keep savings when claims come in lower than expected</li>
+  </ul>
+  <span class="logo-mark">MedMerge</span>
+  <span class="slide-number">3</span>
+</div>
+
+<!-- SLIDE 4: Traction -->
+<div class="slide">
+  <div class="teal-bar"></div>
+  <h2>Traction</h2>
+  <div class="stat-row">
+    <div class="stat">
+      <div class="stat-number">237</div>
+      <div class="stat-label">Lives on plan</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">3</div>
+      <div class="stat-label">States</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">18 mo</div>
+      <div class="stat-label">Build time for chassis</div>
+    </div>
+  </div>
+  <div style="margin-top:32px;">
+    <p>Live customers in Arizona, Kansas, and Louisiana. Each deployment validates the chassis in a new regulatory environment, building a compliance library that compounds over time.</p>
+  </div>
+  <span class="logo-mark">MedMerge</span>
+  <span class="slide-number">4</span>
+</div>
+
+<!-- SLIDE 5: Pipeline -->
+<div class="slide">
+  <div class="teal-bar"></div>
+  <h2>Pipeline</h2>
+  <p style="margin-bottom:20px;">Active conversations with health systems that would add thousands of lives.</p>
+  <div>
+    <div class="pipeline-item">
+      <span class="pipeline-name">OSU Health</span>
+      <span class="pipeline-status">Active Conversation</span>
+    </div>
+    <div class="pipeline-item">
+      <span class="pipeline-name">Nutex Health</span>
+      <span class="pipeline-status">Active Conversation</span>
+    </div>
+    <div class="pipeline-item">
+      <span class="pipeline-name">Physician Hospitals of America</span>
+      <span class="pipeline-status">Active Conversation</span>
+    </div>
+  </div>
+  <p style="margin-top:20px;font-size:15px;color:#A0AEB6;">Nothing signed. These are real conversations, not projections.</p>
+  <span class="logo-mark">MedMerge</span>
+  <span class="slide-number">5</span>
+</div>
+
+<!-- SLIDE 6: The Ask -->
+<div class="slide">
+  <div class="teal-bar"></div>
+  <h2>The Raise</h2>
+  <p style="font-size:20px;margin-bottom:20px;">$3M on a SAFE to fund operations and customer acquisition.</p>
+  <div class="terms-grid">
+    <div class="term-item"><div class="term-label-sm">Instrument</div><div class="term-value-sm">SAFE</div></div>
+    <div class="term-item"><div class="term-label-sm">Amount</div><div class="term-value-sm">$3,000,000</div></div>
+    <div class="term-item"><div class="term-label-sm">Coupon</div><div class="term-value-sm">8% annual</div></div>
+    <div class="term-item"><div class="term-label-sm">Valuation Cap</div><div class="term-value-sm">$40M to $50M</div></div>
+    <div class="term-item"><div class="term-label-sm">Discount</div><div class="term-value-sm">20%</div></div>
+    <div class="term-item"><div class="term-label-sm">First Payment</div><div class="term-value-sm">January 1, 2027</div></div>
+  </div>
+  <span class="logo-mark">MedMerge</span>
+  <span class="slide-number">6</span>
+</div>
+
+<!-- SLIDE 7: Why This Investment -->
+<div class="slide">
+  <div class="teal-bar"></div>
+  <h2>Why This Investment</h2>
+  <div class="two-col">
+    <div class="col">
+      <h3>The Model</h3>
+      <ul>
+        <li>Regulatory moat: 18 months of compliance work already done</li>
+        <li>Repeatable chassis that scales state by state</li>
+        <li>Revenue from day one of each new customer</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>The Operator</h3>
+      <ul>
+        <li>Built and shipped a working product with live customers</li>
+        <li>Understands the hospital benefits market from the inside</li>
+        <li>You know Dutch. That is what this bet is about.</li>
+      </ul>
+    </div>
+  </div>
+  <span class="logo-mark">MedMerge</span>
+  <span class="slide-number">7</span>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- SECTION 2: DEAL SUMMARY                                      -->
+<!-- ============================================================ -->
+<div class="section-divider">Section 2 of 4: Deal Summary</div>
+
+<div class="doc-page" style="max-width:800px;">
+  <div class="doc-header">
+    <h1>MedMerge</h1>
+    <span class="date">Confidential &mdash; April 2026</span>
+  </div>
+
+  <div class="doc-section-title">Company</div>
+  <p>MedMerge provides health benefits administration for small and rural hospitals. The company built a single employer health plan chassis that gives each hospital its own fully compliant, self-funded health plan with transparent pricing and direct savings. The chassis took 18 months to build and is live in three states.</p>
+
+  <div class="doc-section-title">The Problem</div>
+  <p>Small hospitals with fewer than 500 lives are trapped in fully insured arrangements where carriers control pricing, network access, and plan design. These employers overpay by 15 to 30 percent compared to self-funded alternatives, but lack the infrastructure to administer their own plans. No one is building for this market because each customer is small. MedMerge makes it work by running one chassis across many employers.</p>
+
+  <div class="doc-section-title">Traction</div>
+  <div class="two-col" style="margin-top:8px;">
+    <div class="col">
+      <ul>
+        <li>237 lives currently on plan</li>
+        <li>Customers in Arizona, Kansas, Louisiana</li>
+        <li>Fully compliant chassis, operational</li>
+      </ul>
+    </div>
+    <div class="col">
+      <ul>
+        <li>Pipeline: OSU Health, Nutex Health, Physician Hospitals of America</li>
+        <li>Active conversations, nothing signed</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="doc-section-title">Deal Terms</div>
+  <table class="terms-table">
+    <tr><td>Instrument</td><td>SAFE with coupon</td></tr>
+    <tr><td>Raise</td><td>$3,000,000</td></tr>
+    <tr><td>Coupon</td><td>8% annual, paid in cash</td></tr>
+    <tr><td>First Payment</td><td>January 1, 2027</td></tr>
+    <tr><td>Payments</td><td>Annually every January 1</td></tr>
+    <tr><td>Valuation Cap</td><td>$40,000,000 to $50,000,000</td></tr>
+    <tr><td>Discount</td><td>20% at conversion</td></tr>
+    <tr><td>MFN</td><td>Yes</td></tr>
+  </table>
+
+  <div class="doc-section-title">Use of Funds</div>
+  <p>Operations and customer acquisition. Every dollar goes toward putting more lives on the chassis and expanding into additional states. The compliance library built with each new state creates a compounding advantage that makes each subsequent deployment faster and cheaper.</p>
+
+  <div class="doc-section-title">Why This Investment</div>
+  <p>The 8% coupon pays investors while they wait. The valuation cap protects their upside at conversion. The chassis is built, the product is live, and the pipeline includes health systems that would add thousands of lives. This is an operating company with real customers and real revenue. The question is whether it can grow, and the capital is specifically for growth.</p>
+
+  <div class="footer">Confidential. For discussion purposes only. Not an offer to sell securities.</div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- SECTION 3: PRO FORMA                                         -->
+<!-- ============================================================ -->
+<div class="section-divider">Section 3 of 4: Pro Forma Investor Return Illustration</div>
+
+<div class="doc-page">
+  <div class="doc-header">
+    <h1 style="font-size:24px;">MedMerge &mdash; Investor Return Illustration</h1>
+    <span class="date">Confidential &mdash; April 2026</span>
+  </div>
+
+  <div class="doc-section-title">Illustrative Assumptions</div>
+  <div class="assumptions">
+    <p><strong>Investment:</strong> $3,000,000 via SAFE</p>
+    <p><strong>Coupon:</strong> 8% annual, paid in cash</p>
+    <p><strong>SAFE Close:</strong> July 1, 2026 (illustrative)</p>
+    <p><strong>First Coupon Payment:</strong> January 1, 2027</p>
+    <p><strong>Subsequent Payments:</strong> Annually every January 1</p>
+    <p><strong>Illustrative Series A:</strong> July 1, 2029 (3 years from close)</p>
+    <p><strong>Conversion:</strong> Better of valuation cap or 20% discount to Series A price</p>
+  </div>
+
+  <div class="doc-section-title">Coupon Payments to Investors</div>
+  <p>The 8% coupon accrues from the close date and pays cash to investors annually. This is income received regardless of conversion outcome.</p>
+
+  <table class="pf-table">
+    <thead>
+      <tr>
+        <th>Payment Date</th>
+        <th>Period</th>
+        <th class="num">Months</th>
+        <th class="num">Payment</th>
+        <th class="num">Cumulative</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>January 1, 2027</td>
+        <td>Jul 1 &ndash; Dec 31, 2026</td>
+        <td class="num">6</td>
+        <td class="num">$120,000</td>
+        <td class="num">$120,000</td>
+      </tr>
+      <tr>
+        <td>January 1, 2028</td>
+        <td>Jan 1 &ndash; Dec 31, 2027</td>
+        <td class="num">12</td>
+        <td class="num">$240,000</td>
+        <td class="num">$360,000</td>
+      </tr>
+      <tr>
+        <td>January 1, 2029</td>
+        <td>Jan 1 &ndash; Dec 31, 2028</td>
+        <td class="num">12</td>
+        <td class="num">$240,000</td>
+        <td class="num">$600,000</td>
+      </tr>
+      <tr>
+        <td>At Conversion</td>
+        <td>Jan 1 &ndash; Jun 30, 2029</td>
+        <td class="num">6</td>
+        <td class="num">$120,000</td>
+        <td class="num">$720,000</td>
+      </tr>
+      <tr class="total">
+        <td colspan="3">Total Coupon Payments</td>
+        <td class="num">$720,000</td>
+        <td class="num">$720,000</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note">Coupon calculated as $3,000,000 x 8% x (months / 12). Investors receive $720,000 in cash before any conversion event.</p>
+
+  <div class="doc-section-title">Conversion at Series A</div>
+  <p style="font-size:13.5px;">At a priced round, the SAFE converts at the lower of the valuation cap or a 20% discount to the Series A price. The cap determines how much equity investors receive. A lower cap means more equity for the same dollars invested.</p>
+
+  <div class="conversion-grid">
+    <div class="conversion-card">
+      <h3>$40M Cap / $75M Series A</h3>
+      <table>
+        <tr><td>Cap conversion price</td><td class="num">$40M</td></tr>
+        <tr><td>Discount conversion price</td><td class="num">$60M</td></tr>
+        <tr><td>Investor converts at</td><td class="num"><strong>$40M (cap)</strong></td></tr>
+        <tr><td>Effective ownership</td><td class="num">7.50%</td></tr>
+        <tr><td>Equity value at $75M</td><td class="num">$5,625,000</td></tr>
+        <tr><td>Coupon payments received</td><td class="num">$720,000</td></tr>
+        <tr class="highlight-row"><td>Total return</td><td class="num">$6,345,000</td></tr>
+        <tr class="highlight-row"><td>Multiple on invested</td><td class="num">2.12x</td></tr>
+      </table>
+    </div>
+    <div class="conversion-card">
+      <h3>$40M Cap / $100M Series A</h3>
+      <table>
+        <tr><td>Cap conversion price</td><td class="num">$40M</td></tr>
+        <tr><td>Discount conversion price</td><td class="num">$80M</td></tr>
+        <tr><td>Investor converts at</td><td class="num"><strong>$40M (cap)</strong></td></tr>
+        <tr><td>Effective ownership</td><td class="num">7.50%</td></tr>
+        <tr><td>Equity value at $100M</td><td class="num">$7,500,000</td></tr>
+        <tr><td>Coupon payments received</td><td class="num">$720,000</td></tr>
+        <tr class="highlight-row"><td>Total return</td><td class="num">$8,220,000</td></tr>
+        <tr class="highlight-row"><td>Multiple on invested</td><td class="num">2.74x</td></tr>
+      </table>
+    </div>
+    <div class="conversion-card">
+      <h3>$50M Cap / $75M Series A</h3>
+      <table>
+        <tr><td>Cap conversion price</td><td class="num">$50M</td></tr>
+        <tr><td>Discount conversion price</td><td class="num">$60M</td></tr>
+        <tr><td>Investor converts at</td><td class="num"><strong>$50M (cap)</strong></td></tr>
+        <tr><td>Effective ownership</td><td class="num">6.00%</td></tr>
+        <tr><td>Equity value at $75M</td><td class="num">$4,500,000</td></tr>
+        <tr><td>Coupon payments received</td><td class="num">$720,000</td></tr>
+        <tr class="highlight-row"><td>Total return</td><td class="num">$5,220,000</td></tr>
+        <tr class="highlight-row"><td>Multiple on invested</td><td class="num">1.74x</td></tr>
+      </table>
+    </div>
+    <div class="conversion-card">
+      <h3>$50M Cap / $100M Series A</h3>
+      <table>
+        <tr><td>Cap conversion price</td><td class="num">$50M</td></tr>
+        <tr><td>Discount conversion price</td><td class="num">$80M</td></tr>
+        <tr><td>Investor converts at</td><td class="num"><strong>$50M (cap)</strong></td></tr>
+        <tr><td>Effective ownership</td><td class="num">6.00%</td></tr>
+        <tr><td>Equity value at $100M</td><td class="num">$6,000,000</td></tr>
+        <tr><td>Coupon payments received</td><td class="num">$720,000</td></tr>
+        <tr class="highlight-row"><td>Total return</td><td class="num">$6,720,000</td></tr>
+        <tr class="highlight-row"><td>Multiple on invested</td><td class="num">2.24x</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="summary-box">
+    <div class="summary-stat">
+      <span class="label">Return Range</span>
+      <span class="value">1.74x &ndash; 2.74x</span>
+      <span class="sub">on $3M invested</span>
+    </div>
+    <div class="summary-stat">
+      <span class="label">Cash While You Wait</span>
+      <span class="value">$720K</span>
+      <span class="sub">coupon payments over 3 years</span>
+    </div>
+    <div class="summary-stat">
+      <span class="label">Cap Difference</span>
+      <span class="value">1.50%</span>
+      <span class="sub">ownership spread ($40M vs $50M)</span>
+    </div>
+  </div>
+
+  <div class="doc-section-title">How to Read This</div>
+  <p style="font-size:13.5px;">The cap is what matters most. At a $40M cap, investors own 7.50% of the company at conversion. At a $50M cap, they own 6.00%. That 1.50 percentage point difference translates to $1,125,000 at a $75M Series A and $1,500,000 at a $100M Series A. In every scenario, the cap delivers a better price than the 20% discount, which means the cap is the binding term.</p>
+  <p style="font-size:13.5px;">The coupon pays $720,000 in cash over three years regardless of what happens at conversion. That is a 24% cash return on invested capital before any equity upside.</p>
+
+  <div class="footer">Illustrative only. Actual returns depend on timing, Series A terms, and dilution. Not an offer to sell securities.</div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- SECTION 4: SAFE TERM SHEET                                   -->
+<!-- ============================================================ -->
+<div class="section-divider">Section 4 of 4: SAFE Term Sheet (Working Draft)</div>
+
+<div class="doc-page" style="max-width:760px;">
+  <div class="safe-header">
+    <h1>MedMerge, Inc.</h1>
+    <div class="subtitle">Simple Agreement for Future Equity (SAFE) &mdash; Summary of Terms</div>
+  </div>
+
+  <div class="draft-banner">Working Draft &mdash; For Discussion Purposes Only</div>
+
+  <div class="safe-section">
+    <div class="safe-section-title">Parties</div>
+    <div class="term-row">
+      <div class="term-label">Company</div>
+      <div class="term-value">MedMerge, Inc., a <span class="bracket">[State]</span> corporation</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Investor</div>
+      <div class="term-value"><span class="bracket">[Investor Name]</span></div>
+    </div>
+  </div>
+
+  <div class="safe-section">
+    <div class="safe-section-title">Investment</div>
+    <div class="term-row">
+      <div class="term-label">Purchase Amount</div>
+      <div class="term-value"><span class="bracket">[$___________]</span></div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Aggregate Raise</div>
+      <div class="term-value">Up to $3,000,000 across all SAFE holders under this offering</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Close Date</div>
+      <div class="term-value"><span class="bracket">[Date]</span></div>
+    </div>
+  </div>
+
+  <div class="safe-section">
+    <div class="safe-section-title">Coupon</div>
+    <div class="term-row">
+      <div class="term-label">Rate</div>
+      <div class="term-value">8% per annum, calculated on the Purchase Amount</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Accrual</div>
+      <div class="term-value">Accrues from the Close Date on a daily basis (actual/365)</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">First Payment</div>
+      <div class="term-value">January 1, 2027, covering all accrued coupon from Close Date through December 31, 2026</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Subsequent Payments</div>
+      <div class="term-value">Annually on January 1 of each year, covering the prior calendar year</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Payment at Conversion</div>
+      <div class="term-value">All accrued and unpaid coupon from the most recent January 1 through the conversion date shall be paid in cash at closing of the Equity Financing</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Form of Payment</div>
+      <div class="term-value">Cash (wire transfer or ACH)</div>
+    </div>
+  </div>
+
+  <div class="safe-section">
+    <div class="safe-section-title">Conversion</div>
+    <div class="term-row">
+      <div class="term-label">Valuation Cap</div>
+      <div class="term-value"><span class="bracket">[$40,000,000 / $50,000,000]</span> (pre-money)</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Discount Rate</div>
+      <div class="term-value">20% discount to the price per share paid by new investors in the Equity Financing</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Conversion Price</div>
+      <div class="term-value">The lower of (a) the price per share based on the Valuation Cap and (b) the Discount Price. The Investor receives the more favorable conversion.</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Equity Financing</div>
+      <div class="term-value">A bona fide transaction or series of transactions with the principal purpose of raising capital, pursuant to which the Company issues and sells Preferred Stock at a fixed pre-money valuation</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Conversion Shares</div>
+      <div class="term-value">Shares of the series of Preferred Stock issued in the Equity Financing, on the same terms and with the same rights, preferences, and privileges</div>
+    </div>
+  </div>
+
+  <div class="safe-section">
+    <div class="safe-section-title">Most Favored Nation</div>
+    <div class="term-row">
+      <div class="term-label">MFN Provision</div>
+      <div class="term-value">If the Company issues any subsequent SAFE or convertible instrument with terms more favorable to the holder than the terms of this SAFE, the Company shall promptly notify the Investor and, at the Investor's election, amend this SAFE to incorporate such more favorable terms</div>
+    </div>
+  </div>
+
+  <div class="safe-section">
+    <div class="safe-section-title">Liquidity and Dissolution</div>
+    <div class="term-row">
+      <div class="term-label">Liquidity Event</div>
+      <div class="term-value">Upon a Change of Control or Direct Listing, the Investor receives the greater of (a) the Purchase Amount or (b) the amount payable based on conversion at the Valuation Cap</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Dissolution Event</div>
+      <div class="term-value">Upon dissolution, wind-up, or liquidation, the Investor receives the Purchase Amount, paid out of remaining assets in preference to holders of Common Stock and on par with other SAFE holders</div>
+    </div>
+  </div>
+
+  <div class="safe-section">
+    <div class="safe-section-title">General Provisions</div>
+    <div class="term-row">
+      <div class="term-label">Pro Rata Rights</div>
+      <div class="term-value">The Investor shall have the right, but not the obligation, to participate in the Equity Financing on a pro rata basis based on the Investor's ownership percentage on an as-converted basis</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Information Rights</div>
+      <div class="term-value">The Company shall provide annual financial statements and a brief written update on operations to all SAFE holders within 90 days of each fiscal year end</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Governing Law</div>
+      <div class="term-value"><span class="bracket">[State]</span></div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Amendment</div>
+      <div class="term-value">This SAFE may be amended only by written agreement of the Company and the Investor</div>
+    </div>
+  </div>
+
+  <div class="signature-block">
+    <div class="sig-col">
+      <div class="sig-label">Company</div>
+      <div class="sig-line">Name: ________________________</div>
+      <div class="sig-line">Title: ________________________</div>
+      <div class="sig-line">Date: ________________________</div>
+    </div>
+    <div class="sig-col">
+      <div class="sig-label">Investor</div>
+      <div class="sig-line">Name: ________________________</div>
+      <div class="sig-line">Title: ________________________</div>
+      <div class="sig-line">Date: ________________________</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Working draft for discussion purposes only. This summary of terms does not constitute a binding agreement<br>
+    and is subject to the execution of definitive legal documentation. Consult legal counsel before signing.
+  </div>
+</div>
+
+<div style="height:60px;"></div>
+
+</body>
+</html>
