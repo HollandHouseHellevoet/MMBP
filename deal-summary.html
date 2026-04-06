@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MedMerge — Deal Summary</title>
+<link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
+<style>
+  @font-face {
+    font-family: 'Clear Sans';
+    src: local('Clear Sans'), local('ClearSans');
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --slate: #415F6B;
+    --teal: #037676;
+    --slate-gray: #4B5C6B;
+    --light-bg: #F7F8F9;
+    --white: #FFFFFF;
+  }
+
+  body {
+    font-family: 'Clear Sans', 'Segoe UI', system-ui, sans-serif;
+    color: var(--slate);
+    background: var(--white);
+    line-height: 1.6;
+  }
+
+  .page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 48px 56px;
+  }
+
+  .header {
+    border-bottom: 3px solid var(--teal);
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .header h1 {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 28px;
+    color: var(--teal);
+    letter-spacing: -0.3px;
+  }
+
+  .header .date {
+    font-size: 13px;
+    color: #A0AEB6;
+  }
+
+  h2 {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 16px;
+    color: var(--teal);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 28px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 14px;
+    color: var(--slate-gray);
+    margin-bottom: 10px;
+    line-height: 1.7;
+  }
+
+  .terms-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+  }
+
+  .terms-table td {
+    padding: 7px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #EAEEF0;
+    vertical-align: top;
+  }
+
+  .terms-table td:first-child {
+    color: #A0AEB6;
+    width: 160px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .terms-table td:last-child {
+    color: var(--slate);
+    font-weight: 600;
+  }
+
+  .two-col {
+    display: flex;
+    gap: 40px;
+    margin-top: 8px;
+  }
+
+  .two-col .col {
+    flex: 1;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  ul li {
+    font-size: 14px;
+    color: var(--slate-gray);
+    padding: 3px 0;
+    padding-left: 14px;
+    position: relative;
+  }
+
+  ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 5px;
+    height: 5px;
+    background: var(--teal);
+    border-radius: 50%;
+  }
+
+  .footer {
+    margin-top: 36px;
+    padding-top: 12px;
+    border-top: 1px solid #EAEEF0;
+    font-size: 11px;
+    color: #A0AEB6;
+    text-align: center;
+  }
+
+  @media print {
+    .page { padding: 32px 40px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="header">
+    <h1>MedMerge</h1>
+    <span class="date">Confidential — April 2026</span>
+  </div>
+
+  <h2>Company</h2>
+  <p>MedMerge provides health benefits administration for small and rural hospitals. The company built a single employer health plan chassis that gives each hospital its own fully compliant, self-funded health plan with transparent pricing and direct savings. The chassis took 18 months to build and is live in three states.</p>
+
+  <h2>The Problem</h2>
+  <p>Small hospitals with fewer than 500 lives are trapped in fully insured arrangements where carriers control pricing, network access, and plan design. These employers overpay by 15 to 30 percent compared to self-funded alternatives, but lack the infrastructure to administer their own plans. No one is building for this market because each customer is small. MedMerge makes it work by running one chassis across many employers.</p>
+
+  <h2>Traction</h2>
+  <div class="two-col">
+    <div class="col">
+      <ul>
+        <li>237 lives currently on plan</li>
+        <li>Customers in Arizona, Kansas, Louisiana</li>
+        <li>Fully compliant chassis, operational</li>
+      </ul>
+    </div>
+    <div class="col">
+      <ul>
+        <li>Pipeline: OSU Health, Nutex Health, Physician Hospitals of America</li>
+        <li>Active conversations, nothing signed</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Deal Terms</h2>
+  <table class="terms-table">
+    <tr><td>Instrument</td><td>SAFE with coupon</td></tr>
+    <tr><td>Raise</td><td>$3,000,000</td></tr>
+    <tr><td>Coupon</td><td>8% annual, paid in cash</td></tr>
+    <tr><td>First Payment</td><td>January 1, 2027</td></tr>
+    <tr><td>Payments</td><td>Annually every January 1</td></tr>
+    <tr><td>Valuation Cap</td><td>$40,000,000 to $50,000,000</td></tr>
+    <tr><td>Discount</td><td>20% at conversion</td></tr>
+    <tr><td>MFN</td><td>Yes</td></tr>
+  </table>
+
+  <h2>Use of Funds</h2>
+  <p>Operations and customer acquisition. Every dollar goes toward putting more lives on the chassis and expanding into additional states. The compliance library built with each new state creates a compounding advantage that makes each subsequent deployment faster and cheaper.</p>
+
+  <h2>Why This Investment</h2>
+  <p>The 8% coupon pays investors while they wait. The valuation cap protects their upside at conversion. The chassis is built, the product is live, and the pipeline includes health systems that would add thousands of lives. This is an operating company with real customers and real revenue. The question is whether it can grow, and the capital is specifically for growth.</p>
+
+  <div class="footer">
+    Confidential. For discussion purposes only. Not an offer to sell securities.
+  </div>
+
+</div>
+
+</body>
+</html>

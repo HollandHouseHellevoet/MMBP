@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MedMerge — Pro Forma Investor Return Illustration</title>
+<link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
+<style>
+  @font-face {
+    font-family: 'Clear Sans';
+    src: local('Clear Sans'), local('ClearSans');
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --slate: #415F6B;
+    --teal: #037676;
+    --slate-gray: #4B5C6B;
+    --light-bg: #F7F8F9;
+    --white: #FFFFFF;
+  }
+
+  body {
+    font-family: 'Clear Sans', 'Segoe UI', system-ui, sans-serif;
+    color: var(--slate);
+    background: var(--white);
+    line-height: 1.6;
+  }
+
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 48px 56px;
+  }
+
+  .header {
+    border-bottom: 3px solid var(--teal);
+    padding-bottom: 16px;
+    margin-bottom: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .header h1 {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 26px;
+    color: var(--teal);
+  }
+
+  .header .date {
+    font-size: 13px;
+    color: #A0AEB6;
+  }
+
+  h2 {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 15px;
+    color: var(--teal);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 28px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 13.5px;
+    color: var(--slate-gray);
+    margin-bottom: 8px;
+    line-height: 1.7;
+  }
+
+  .assumptions {
+    background: var(--light-bg);
+    padding: 16px 20px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+  }
+
+  .assumptions p {
+    margin-bottom: 3px;
+    font-size: 13px;
+  }
+
+  .assumptions strong {
+    color: var(--slate);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    font-size: 13.5px;
+  }
+
+  th {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #A0AEB6;
+    text-align: left;
+    padding: 8px 12px;
+    border-bottom: 2px solid #EAEEF0;
+  }
+
+  th.num, td.num {
+    text-align: right;
+  }
+
+  td {
+    padding: 7px 12px;
+    border-bottom: 1px solid #EAEEF0;
+    color: var(--slate);
+  }
+
+  tr.total td {
+    border-top: 2px solid var(--teal);
+    border-bottom: 2px solid var(--teal);
+    font-weight: 700;
+    color: var(--slate);
+  }
+
+  .conversion-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 12px;
+  }
+
+  .conversion-card {
+    border: 1px solid #EAEEF0;
+    border-radius: 4px;
+    padding: 20px;
+  }
+
+  .conversion-card h3 {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 14px;
+    color: var(--teal);
+    margin-bottom: 12px;
+  }
+
+  .conversion-card table {
+    margin-top: 0;
+  }
+
+  .conversion-card td {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+
+  .conversion-card th {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+
+  .highlight-row td {
+    background: #E8F5F5;
+    font-weight: 700;
+    color: var(--teal);
+  }
+
+  .summary-box {
+    background: var(--slate);
+    color: var(--white);
+    padding: 20px 24px;
+    border-radius: 4px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  .summary-stat {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .summary-stat .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #A0AEB6;
+    margin-bottom: 4px;
+  }
+
+  .summary-stat .value {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 26px;
+    color: var(--white);
+  }
+
+  .summary-stat .sub {
+    font-size: 11px;
+    color: #A0AEB6;
+    margin-top: 2px;
+  }
+
+  .note {
+    font-size: 11px;
+    color: #A0AEB6;
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+
+  .footer {
+    margin-top: 28px;
+    padding-top: 12px;
+    border-top: 1px solid #EAEEF0;
+    font-size: 11px;
+    color: #A0AEB6;
+    text-align: center;
+  }
+
+  @media print {
+    .page { padding: 28px 36px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="header">
+    <h1>MedMerge — Investor Return Illustration</h1>
+    <span class="date">Confidential — April 2026</span>
+  </div>
+
+  <h2>Illustrative Assumptions</h2>
+  <div class="assumptions">
+    <p><strong>Investment:</strong> $3,000,000 via SAFE</p>
+    <p><strong>Coupon:</strong> 8% annual, paid in cash</p>
+    <p><strong>SAFE Close:</strong> July 1, 2026 (illustrative)</p>
+    <p><strong>First Coupon Payment:</strong> January 1, 2027</p>
+    <p><strong>Subsequent Payments:</strong> Annually every January 1</p>
+    <p><strong>Illustrative Series A:</strong> July 1, 2029 (3 years from close)</p>
+    <p><strong>Conversion:</strong> Better of valuation cap or 20% discount to Series A price</p>
+  </div>
+
+  <!-- SECTION 1: Coupon Cash Flow -->
+  <h2>Coupon Payments to Investors</h2>
+  <p>The 8% coupon accrues from the close date and pays cash to investors annually. This is income received regardless of conversion outcome.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Payment Date</th>
+        <th>Period</th>
+        <th class="num">Months</th>
+        <th class="num">Payment</th>
+        <th class="num">Cumulative</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>January 1, 2027</td>
+        <td>Jul 1 – Dec 31, 2026</td>
+        <td class="num">6</td>
+        <td class="num">$120,000</td>
+        <td class="num">$120,000</td>
+      </tr>
+      <tr>
+        <td>January 1, 2028</td>
+        <td>Jan 1 – Dec 31, 2027</td>
+        <td class="num">12</td>
+        <td class="num">$240,000</td>
+        <td class="num">$360,000</td>
+      </tr>
+      <tr>
+        <td>January 1, 2029</td>
+        <td>Jan 1 – Dec 31, 2028</td>
+        <td class="num">12</td>
+        <td class="num">$240,000</td>
+        <td class="num">$600,000</td>
+      </tr>
+      <tr>
+        <td>At Conversion</td>
+        <td>Jan 1 – Jun 30, 2029</td>
+        <td class="num">6</td>
+        <td class="num">$120,000</td>
+        <td class="num">$720,000</td>
+      </tr>
+      <tr class="total">
+        <td colspan="3">Total Coupon Payments</td>
+        <td class="num">$720,000</td>
+        <td class="num">$720,000</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note">Coupon calculated as $3,000,000 × 8% × (months / 12). Investors receive $720,000 in cash before any conversion event.</p>
+
+  <!-- SECTION 2: Conversion Scenarios -->
+  <h2>Conversion at Series A</h2>
+  <p>At a priced round, the SAFE converts at the lower of the valuation cap or a 20% discount to the Series A price. The cap determines how much equity investors receive. A lower cap means more equity for the same dollars invested.</p>
+
+  <div class="conversion-grid">
+
+    <!-- Card 1: $40M Cap / $75M Series A -->
+    <div class="conversion-card">
+      <h3>$40M Cap / $75M Series A</h3>
+      <table>
+        <tr><td>Cap conversion price</td><td class="num">$40M</td></tr>
+        <tr><td>Discount conversion price</td><td class="num">$60M</td></tr>
+        <tr><td>Investor converts at</td><td class="num"><strong>$40M (cap)</strong></td></tr>
+        <tr><td>Effective ownership</td><td class="num">7.50%</td></tr>
+        <tr><td>Equity value at $75M</td><td class="num">$5,625,000</td></tr>
+        <tr><td>Coupon payments received</td><td class="num">$720,000</td></tr>
+        <tr class="highlight-row"><td>Total return</td><td class="num">$6,345,000</td></tr>
+        <tr class="highlight-row"><td>Multiple on invested</td><td class="num">2.12x</td></tr>
+      </table>
+    </div>
+
+    <!-- Card 2: $40M Cap / $100M Series A -->
+    <div class="conversion-card">
+      <h3>$40M Cap / $100M Series A</h3>
+      <table>
+        <tr><td>Cap conversion price</td><td class="num">$40M</td></tr>
+        <tr><td>Discount conversion price</td><td class="num">$80M</td></tr>
+        <tr><td>Investor converts at</td><td class="num"><strong>$40M (cap)</strong></td></tr>
+        <tr><td>Effective ownership</td><td class="num">7.50%</td></tr>
+        <tr><td>Equity value at $100M</td><td class="num">$7,500,000</td></tr>
+        <tr><td>Coupon payments received</td><td class="num">$720,000</td></tr>
+        <tr class="highlight-row"><td>Total return</td><td class="num">$8,220,000</td></tr>
+        <tr class="highlight-row"><td>Multiple on invested</td><td class="num">2.74x</td></tr>
+      </table>
+    </div>
+
+    <!-- Card 3: $50M Cap / $75M Series A -->
+    <div class="conversion-card">
+      <h3>$50M Cap / $75M Series A</h3>
+      <table>
+        <tr><td>Cap conversion price</td><td class="num">$50M</td></tr>
+        <tr><td>Discount conversion price</td><td class="num">$60M</td></tr>
+        <tr><td>Investor converts at</td><td class="num"><strong>$50M (cap)</strong></td></tr>
+        <tr><td>Effective ownership</td><td class="num">6.00%</td></tr>
+        <tr><td>Equity value at $75M</td><td class="num">$4,500,000</td></tr>
+        <tr><td>Coupon payments received</td><td class="num">$720,000</td></tr>
+        <tr class="highlight-row"><td>Total return</td><td class="num">$5,220,000</td></tr>
+        <tr class="highlight-row"><td>Multiple on invested</td><td class="num">1.74x</td></tr>
+      </table>
+    </div>
+
+    <!-- Card 4: $50M Cap / $100M Series A -->
+    <div class="conversion-card">
+      <h3>$50M Cap / $100M Series A</h3>
+      <table>
+        <tr><td>Cap conversion price</td><td class="num">$50M</td></tr>
+        <tr><td>Discount conversion price</td><td class="num">$80M</td></tr>
+        <tr><td>Investor converts at</td><td class="num"><strong>$50M (cap)</strong></td></tr>
+        <tr><td>Effective ownership</td><td class="num">6.00%</td></tr>
+        <tr><td>Equity value at $100M</td><td class="num">$6,000,000</td></tr>
+        <tr><td>Coupon payments received</td><td class="num">$720,000</td></tr>
+        <tr class="highlight-row"><td>Total return</td><td class="num">$6,720,000</td></tr>
+        <tr class="highlight-row"><td>Multiple on invested</td><td class="num">2.24x</td></tr>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- Summary -->
+  <div class="summary-box">
+    <div class="summary-stat">
+      <span class="label">Return Range</span>
+      <span class="value">1.74x – 2.74x</span>
+      <span class="sub">on $3M invested</span>
+    </div>
+    <div class="summary-stat">
+      <span class="label">Cash While You Wait</span>
+      <span class="value">$720K</span>
+      <span class="sub">coupon payments over 3 years</span>
+    </div>
+    <div class="summary-stat">
+      <span class="label">Cap Difference</span>
+      <span class="value">1.50%</span>
+      <span class="sub">ownership spread ($40M vs $50M)</span>
+    </div>
+  </div>
+
+  <h2>How to Read This</h2>
+  <p>The cap is what matters most. At a $40M cap, investors own 7.50% of the company at conversion. At a $50M cap, they own 6.00%. That 1.50 percentage point difference translates to $1,125,000 at a $75M Series A and $1,500,000 at a $100M Series A. In every scenario, the cap delivers a better price than the 20% discount, which means the cap is the binding term.</p>
+  <p>The coupon pays $720,000 in cash over three years regardless of what happens at conversion. That is a 24% cash return on invested capital before any equity upside.</p>
+
+  <div class="footer">
+    Illustrative only. Actual returns depend on timing, Series A terms, and dilution. Not an offer to sell securities.
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MedMerge — SAFE Term Sheet (Working Draft)</title>
+<link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
+<style>
+  @font-face {
+    font-family: 'Clear Sans';
+    src: local('Clear Sans'), local('ClearSans');
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --slate: #415F6B;
+    --teal: #037676;
+    --slate-gray: #4B5C6B;
+    --white: #FFFFFF;
+  }
+
+  body {
+    font-family: 'Clear Sans', 'Segoe UI', system-ui, sans-serif;
+    color: var(--slate);
+    background: var(--white);
+    line-height: 1.7;
+  }
+
+  .page {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 56px;
+  }
+
+  .header {
+    text-align: center;
+    border-bottom: 3px solid var(--teal);
+    padding-bottom: 20px;
+    margin-bottom: 8px;
+  }
+
+  .header h1 {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 24px;
+    color: var(--teal);
+    margin-bottom: 4px;
+  }
+
+  .header .subtitle {
+    font-size: 14px;
+    color: #A0AEB6;
+  }
+
+  .draft-banner {
+    background: #FFF8E7;
+    border: 1px solid #E6D5A8;
+    color: #8B7340;
+    text-align: center;
+    padding: 8px 16px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    border-radius: 4px;
+  }
+
+  .section {
+    margin-bottom: 20px;
+    page-break-inside: avoid;
+  }
+
+  .section-title {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--teal);
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #EAEEF0;
+  }
+
+  .term-row {
+    display: flex;
+    padding: 6px 0;
+    border-bottom: 1px solid #F3F4F5;
+    font-size: 14px;
+  }
+
+  .term-label {
+    width: 200px;
+    flex-shrink: 0;
+    color: #A0AEB6;
+    font-size: 13px;
+  }
+
+  .term-value {
+    flex: 1;
+    color: var(--slate);
+  }
+
+  .term-value p {
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+
+  .term-value p:last-child {
+    margin-bottom: 0;
+  }
+
+  .bracket {
+    color: var(--teal);
+    font-weight: 600;
+  }
+
+  .legal-text {
+    font-size: 13px;
+    color: var(--slate-gray);
+    line-height: 1.8;
+    margin-top: 4px;
+  }
+
+  .signature-block {
+    margin-top: 40px;
+    display: flex;
+    gap: 60px;
+  }
+
+  .sig-col {
+    flex: 1;
+  }
+
+  .sig-col .sig-label {
+    font-size: 12px;
+    color: #A0AEB6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+  }
+
+  .sig-line {
+    border-top: 1px solid var(--slate);
+    padding-top: 6px;
+    font-size: 13px;
+    color: var(--slate-gray);
+    margin-bottom: 16px;
+  }
+
+  .footer {
+    margin-top: 36px;
+    padding-top: 12px;
+    border-top: 1px solid #EAEEF0;
+    font-size: 11px;
+    color: #A0AEB6;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  @media print {
+    .page { padding: 32px 40px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="header">
+    <h1>MedMerge, Inc.</h1>
+    <div class="subtitle">Simple Agreement for Future Equity (SAFE) — Summary of Terms</div>
+  </div>
+
+  <div class="draft-banner">Working Draft — For Discussion Purposes Only</div>
+
+  <!-- Parties -->
+  <div class="section">
+    <div class="section-title">Parties</div>
+    <div class="term-row">
+      <div class="term-label">Company</div>
+      <div class="term-value">MedMerge, Inc., a <span class="bracket">[State]</span> corporation</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Investor</div>
+      <div class="term-value"><span class="bracket">[Investor Name]</span></div>
+    </div>
+  </div>
+
+  <!-- Investment -->
+  <div class="section">
+    <div class="section-title">Investment</div>
+    <div class="term-row">
+      <div class="term-label">Purchase Amount</div>
+      <div class="term-value"><span class="bracket">[$___________]</span></div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Aggregate Raise</div>
+      <div class="term-value">Up to $3,000,000 across all SAFE holders under this offering</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Close Date</div>
+      <div class="term-value"><span class="bracket">[Date]</span></div>
+    </div>
+  </div>
+
+  <!-- Coupon -->
+  <div class="section">
+    <div class="section-title">Coupon</div>
+    <div class="term-row">
+      <div class="term-label">Rate</div>
+      <div class="term-value">8% per annum, calculated on the Purchase Amount</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Accrual</div>
+      <div class="term-value">Accrues from the Close Date on a daily basis (actual/365)</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">First Payment</div>
+      <div class="term-value">January 1, 2027, covering all accrued coupon from Close Date through December 31, 2026</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Subsequent Payments</div>
+      <div class="term-value">Annually on January 1 of each year, covering the prior calendar year</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Payment at Conversion</div>
+      <div class="term-value">All accrued and unpaid coupon from the most recent January 1 through the conversion date shall be paid in cash at closing of the Equity Financing</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Form of Payment</div>
+      <div class="term-value">Cash (wire transfer or ACH)</div>
+    </div>
+  </div>
+
+  <!-- Conversion -->
+  <div class="section">
+    <div class="section-title">Conversion</div>
+    <div class="term-row">
+      <div class="term-label">Valuation Cap</div>
+      <div class="term-value"><span class="bracket">[$40,000,000 / $50,000,000]</span> (pre-money)</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Discount Rate</div>
+      <div class="term-value">20% discount to the price per share paid by new investors in the Equity Financing</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Conversion Price</div>
+      <div class="term-value">The lower of (a) the price per share based on the Valuation Cap and (b) the Discount Price. The Investor receives the more favorable conversion.</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Equity Financing</div>
+      <div class="term-value">A bona fide transaction or series of transactions with the principal purpose of raising capital, pursuant to which the Company issues and sells Preferred Stock at a fixed pre-money valuation</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Conversion Shares</div>
+      <div class="term-value">Shares of the series of Preferred Stock issued in the Equity Financing, on the same terms and with the same rights, preferences, and privileges</div>
+    </div>
+  </div>
+
+  <!-- MFN -->
+  <div class="section">
+    <div class="section-title">Most Favored Nation</div>
+    <div class="term-row">
+      <div class="term-label">MFN Provision</div>
+      <div class="term-value">If the Company issues any subsequent SAFE or convertible instrument with terms more favorable to the holder than the terms of this SAFE, the Company shall promptly notify the Investor and, at the Investor's election, amend this SAFE to incorporate such more favorable terms</div>
+    </div>
+  </div>
+
+  <!-- Liquidity / Dissolution -->
+  <div class="section">
+    <div class="section-title">Liquidity and Dissolution</div>
+    <div class="term-row">
+      <div class="term-label">Liquidity Event</div>
+      <div class="term-value">
+        <p>Upon a Change of Control or Direct Listing, the Investor receives the greater of (a) the Purchase Amount or (b) the amount payable based on conversion at the Valuation Cap</p>
+      </div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Dissolution Event</div>
+      <div class="term-value">Upon dissolution, wind-up, or liquidation, the Investor receives the Purchase Amount, paid out of remaining assets in preference to holders of Common Stock and on par with other SAFE holders</div>
+    </div>
+  </div>
+
+  <!-- General -->
+  <div class="section">
+    <div class="section-title">General Provisions</div>
+    <div class="term-row">
+      <div class="term-label">Pro Rata Rights</div>
+      <div class="term-value">The Investor shall have the right, but not the obligation, to participate in the Equity Financing on a pro rata basis based on the Investor's ownership percentage on an as-converted basis</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Information Rights</div>
+      <div class="term-value">The Company shall provide annual financial statements and a brief written update on operations to all SAFE holders within 90 days of each fiscal year end</div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Governing Law</div>
+      <div class="term-value"><span class="bracket">[State]</span></div>
+    </div>
+    <div class="term-row">
+      <div class="term-label">Amendment</div>
+      <div class="term-value">This SAFE may be amended only by written agreement of the Company and the Investor</div>
+    </div>
+  </div>
+
+  <!-- Signatures -->
+  <div class="signature-block">
+    <div class="sig-col">
+      <div class="sig-label">Company</div>
+      <div class="sig-line">Name: ________________________</div>
+      <div class="sig-line">Title: ________________________</div>
+      <div class="sig-line">Date: ________________________</div>
+    </div>
+    <div class="sig-col">
+      <div class="sig-label">Investor</div>
+      <div class="sig-line">Name: ________________________</div>
+      <div class="sig-line">Title: ________________________</div>
+      <div class="sig-line">Date: ________________________</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Working draft for discussion purposes only. This summary of terms does not constitute a binding agreement<br>
+    and is subject to the execution of definitive legal documentation. Consult legal counsel before signing.
+  </div>
+
+</div>
+
+</body>
+</html>

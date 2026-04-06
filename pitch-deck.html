@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MedMerge — Investor Pitch Deck</title>
+<link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
+<style>
+  @font-face {
+    font-family: 'Clear Sans';
+    src: local('Clear Sans'), local('ClearSans');
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --slate: #415F6B;
+    --teal: #037676;
+    --slate-gray: #4B5C6B;
+    --light-bg: #F7F8F9;
+    --white: #FFFFFF;
+  }
+
+  body {
+    font-family: 'Clear Sans', 'Segoe UI', system-ui, sans-serif;
+    color: var(--slate);
+    background: var(--light-bg);
+    line-height: 1.6;
+  }
+
+  .slide {
+    width: 960px;
+    height: 540px;
+    margin: 40px auto;
+    background: var(--white);
+    border-radius: 4px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 80px;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+  }
+
+  h1 {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 42px;
+    color: var(--slate);
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+  }
+
+  h2 {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 32px;
+    color: var(--slate);
+    margin-bottom: 24px;
+    letter-spacing: -0.3px;
+  }
+
+  h3 {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 22px;
+    color: var(--teal);
+    margin-bottom: 12px;
+  }
+
+  p, li {
+    font-size: 18px;
+    color: var(--slate-gray);
+    line-height: 1.7;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  ul li {
+    padding: 6px 0;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 8px;
+    height: 8px;
+    background: var(--teal);
+    border-radius: 50%;
+  }
+
+  .slide-number {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    font-size: 13px;
+    color: #A0AEB6;
+    font-family: 'Hammersmith One', sans-serif;
+  }
+
+  .logo-mark {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 13px;
+    color: var(--teal);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .teal-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--teal);
+  }
+
+  .subtitle {
+    font-size: 20px;
+    color: var(--slate-gray);
+    margin-top: 8px;
+  }
+
+  .stat-row {
+    display: flex;
+    gap: 48px;
+    margin-top: 24px;
+  }
+
+  .stat {
+    text-align: left;
+  }
+
+  .stat-number {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 48px;
+    color: var(--teal);
+    line-height: 1.1;
+  }
+
+  .stat-label {
+    font-size: 15px;
+    color: var(--slate-gray);
+    margin-top: 4px;
+  }
+
+  .two-col {
+    display: flex;
+    gap: 48px;
+    margin-top: 16px;
+  }
+
+  .col {
+    flex: 1;
+  }
+
+  .terms-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 32px;
+    margin-top: 16px;
+  }
+
+  .term-item {
+    padding: 8px 0;
+    border-bottom: 1px solid #E8ECED;
+  }
+
+  .term-label {
+    font-size: 13px;
+    color: #A0AEB6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+  }
+
+  .term-value {
+    font-size: 18px;
+    color: var(--slate);
+    font-weight: 600;
+  }
+
+  .cover-slide {
+    justify-content: flex-end;
+    padding-bottom: 80px;
+  }
+
+  .cover-slide h1 {
+    font-size: 52px;
+    color: var(--teal);
+  }
+
+  .cover-slide .subtitle {
+    font-size: 22px;
+  }
+
+  .cover-date {
+    font-size: 14px;
+    color: #A0AEB6;
+    margin-top: 16px;
+  }
+
+  .pipeline-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #E8ECED;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .pipeline-name {
+    font-size: 18px;
+    color: var(--slate);
+    font-weight: 600;
+  }
+
+  .pipeline-status {
+    font-size: 14px;
+    color: var(--teal);
+    background: #E8F5F5;
+    padding: 3px 12px;
+    border-radius: 12px;
+  }
+
+  @media print {
+    body { background: white; }
+    .slide {
+      box-shadow: none;
+      margin: 0;
+      border-radius: 0;
+      page-break-after: always;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: Cover -->
+<div class="slide cover-slide">
+  <div class="teal-bar"></div>
+  <h1>MedMerge</h1>
+  <p class="subtitle">Health benefits that work for small hospitals.</p>
+  <p class="cover-date">Confidential — April 2026</p>
+</div>
+
+<!-- SLIDE 2: The Problem -->
+<div class="slide">
+  <div class="teal-bar"></div>
+  <h2>The Problem</h2>
+  <p style="font-size: 20px; margin-bottom: 24px;">Small and rural hospitals face a benefits crisis that no one is solving.</p>
+  <ul>
+    <li>Health plan costs are rising 8 to 12 percent annually for employers with fewer than 500 lives</li>
+    <li>Fully insured carriers dictate pricing, network access, and plan design with no transparency</li>
+    <li>Self-funded alternatives require infrastructure that small hospitals do not have</li>
+    <li>The result: these employers overpay, lose employees, and have no leverage to change it</li>
+  </ul>
+  <span class="logo-mark">MedMerge</span>
+  <span class="slide-number">2</span>
+</div>
+
+<!-- SLIDE 3: The Solution -->
+<div class="slide">
+  <div class="teal-bar"></div>
+  <h2>What MedMerge Built</h2>
+  <p style="font-size: 20px; margin-bottom: 24px;">A single employer health plan chassis, purpose-built for small hospitals.</p>
+  <ul>
+    <li>Fully compliant plan structure that took 18 months to design and build</li>
+    <li>Each employer gets its own plan with transparent pricing, no pooled risk with strangers</li>
+    <li>MedMerge handles administration, compliance, and network access</li>
+    <li>Employers keep savings when claims come in lower than expected</li>
+  </ul>
+  <span class="logo-mark">MedMerge</span>
+  <span class="slide-number">3</span>
+</div>
+
+<!-- SLIDE 4: Traction -->
+<div class="slide">
+  <div class="teal-bar"></div>
+  <h2>Traction</h2>
+  <div class="stat-row">
+    <div class="stat">
+      <div class="stat-number">237</div>
+      <div class="stat-label">Lives on plan</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">3</div>
+      <div class="stat-label">States</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">18 mo</div>
+      <div class="stat-label">Build time for chassis</div>
+    </div>
+  </div>
+  <div style="margin-top: 32px;">
+    <p>Live customers in Arizona, Kansas, and Louisiana. Each deployment validates the chassis in a new regulatory environment, building a compliance library that compounds over time.</p>
+  </div>
+  <span class="logo-mark">MedMerge</span>
+  <span class="slide-number">4</span>
+</div>
+
+<!-- SLIDE 5: Pipeline -->
+<div class="slide">
+  <div class="teal-bar"></div>
+  <h2>Pipeline</h2>
+  <p style="margin-bottom: 20px;">Active conversations with health systems that would add thousands of lives.</p>
+  <div>
+    <div class="pipeline-item">
+      <span class="pipeline-name">OSU Health</span>
+      <span class="pipeline-status">Active Conversation</span>
+    </div>
+    <div class="pipeline-item">
+      <span class="pipeline-name">Nutex Health</span>
+      <span class="pipeline-status">Active Conversation</span>
+    </div>
+    <div class="pipeline-item">
+      <span class="pipeline-name">Physician Hospitals of America</span>
+      <span class="pipeline-status">Active Conversation</span>
+    </div>
+  </div>
+  <p style="margin-top: 20px; font-size: 15px; color: #A0AEB6;">Nothing signed. These are real conversations, not projections.</p>
+  <span class="logo-mark">MedMerge</span>
+  <span class="slide-number">5</span>
+</div>
+
+<!-- SLIDE 6: The Ask -->
+<div class="slide">
+  <div class="teal-bar"></div>
+  <h2>The Raise</h2>
+  <p style="font-size: 20px; margin-bottom: 20px;">$3M on a SAFE to fund operations and customer acquisition.</p>
+  <div class="terms-grid">
+    <div class="term-item">
+      <div class="term-label">Instrument</div>
+      <div class="term-value">SAFE</div>
+    </div>
+    <div class="term-item">
+      <div class="term-label">Amount</div>
+      <div class="term-value">$3,000,000</div>
+    </div>
+    <div class="term-item">
+      <div class="term-label">Coupon</div>
+      <div class="term-value">8% annual</div>
+    </div>
+    <div class="term-item">
+      <div class="term-label">Valuation Cap</div>
+      <div class="term-value">$40M to $50M</div>
+    </div>
+    <div class="term-item">
+      <div class="term-label">Discount</div>
+      <div class="term-value">20%</div>
+    </div>
+    <div class="term-item">
+      <div class="term-label">First Payment</div>
+      <div class="term-value">January 1, 2027</div>
+    </div>
+  </div>
+  <span class="logo-mark">MedMerge</span>
+  <span class="slide-number">6</span>
+</div>
+
+<!-- SLIDE 7: Why This, Why Now -->
+<div class="slide">
+  <div class="teal-bar"></div>
+  <h2>Why This Investment</h2>
+  <div class="two-col">
+    <div class="col">
+      <h3>The Model</h3>
+      <ul>
+        <li>Regulatory moat: 18 months of compliance work already done</li>
+        <li>Repeatable chassis that scales state by state</li>
+        <li>Revenue from day one of each new customer</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>The Operator</h3>
+      <ul>
+        <li>Built and shipped a working product with live customers</li>
+        <li>Understands the hospital benefits market from the inside</li>
+        <li>You know Dutch. That is what this bet is about.</li>
+      </ul>
+    </div>
+  </div>
+  <span class="logo-mark">MedMerge</span>
+  <span class="slide-number">7</span>
+</div>
+
+</body>
+</html>
