@@ -420,6 +420,95 @@
     .slide, .doc-page { page-break-inside: avoid; }
     .section-divider { page-break-before: always; }
   }
+
+  /* ---- MOBILE ---- */
+  @media (max-width: 1024px) {
+    :root {
+      --margin-l: 24px;
+      --margin-r: 24px;
+    }
+    .slide {
+      width: 100%;
+      height: auto;
+      min-height: 0;
+      padding: 60px 24px 48px;
+    }
+    .cover-slide {
+      padding-bottom: 48px;
+    }
+    .slide-wordmark { left: 24px; }
+    .slide-num { right: 24px; }
+    .slide-h { font-size: 32px; max-width: none; }
+    .cover-slide .slide-h { font-size: 40px; }
+    .slide-body { font-size: 16px; max-width: none; }
+    .slide-quote { max-width: none; }
+    .slide-quote p { font-size: 19px; }
+    .stat-row-dark { gap: 32px; flex-wrap: wrap; }
+    .stat-dark .num { font-size: 40px; }
+    .two-col-dark { flex-direction: column; gap: 28px; }
+    .pipe-row { max-width: none; }
+    .terms-dark { grid-template-columns: 1fr; }
+    .section-divider {
+      max-width: 100%;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    /* Doc pages: full width, 24px padding */
+    .doc-page {
+      max-width: 100%;
+      margin: 16px 0;
+      padding: 32px 24px;
+      border-left: none;
+      border-right: none;
+    }
+    .doc-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .doc-header h1 { font-size: 24px; }
+
+    /* Terms table */
+    .terms-table td:first-child { width: 120px; font-size: 10px; }
+    .terms-table td:last-child { font-size: 14px; }
+
+    /* Pro forma table: horizontal scroll */
+    .pf-table { font-size: 12px; }
+    .pf-table th { font-size: 9px; padding: 8px 6px; }
+    .pf-table td { padding: 6px; }
+
+    /* Conversion cards: stack vertically */
+    .conversion-grid { grid-template-columns: 1fr; }
+    .conversion-card { padding: 20px; }
+    .conversion-card td { font-size: 13px; padding: 5px 4px; }
+
+    /* Summary box: stack */
+    .summary-box { flex-direction: column; gap: 20px; padding: 20px 24px; }
+
+    /* SAFE term sheet: clean two-column table layout */
+    .term-row {
+      display: flex;
+      flex-direction: row;
+    }
+    .term-label {
+      width: 140px;
+      min-width: 140px;
+      font-size: 12px;
+    }
+    .term-value { font-size: 14px; }
+
+    /* Signature block */
+    .signature-block { flex-direction: column; gap: 32px; }
+  }
+
+  @media (max-width: 480px) {
+    .slide-h { font-size: 26px; }
+    .cover-slide .slide-h { font-size: 32px; }
+    .slide-body { font-size: 15px; }
+    .stat-row-dark { gap: 24px; }
+    .stat-dark .num { font-size: 36px; }
+    .pipe-row { flex-direction: column; align-items: flex-start; gap: 4px; }
+    .term-label { width: 110px; min-width: 110px; font-size: 11px; }
+    .term-value { font-size: 13px; }
+    .doc-header h1 { font-size: 22px; }
+  }
 </style>
 </head>
 <body>
