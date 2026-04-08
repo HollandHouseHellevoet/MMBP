@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MedMerge Fundraise Materials</title>
+<title>MedMerge Collective</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
@@ -34,8 +34,6 @@
     color: #A0AEB6;
     border-top: 2px solid var(--teal);
   }
-
-  /* ---- PITCH DECK ---- */
   .slide {
     width: 960px;
     height: 540px;
@@ -106,7 +104,6 @@
   }
   .cover-slide { justify-content: flex-end; padding-bottom: 80px; }
   .cover-slide h1 { font-size: 52px; color: var(--teal); }
-  .cover-slide .subtitle { font-size: 22px; color: var(--slate-gray); margin-top: 8px; }
   .cover-date { font-size: 14px; color: #A0AEB6; margin-top: 16px; }
   .stat-row { display: flex; gap: 48px; margin-top: 24px; }
   .stat-number { font-family: "Hammersmith One", sans-serif; font-size: 48px; color: var(--teal); line-height: 1.1; }
@@ -128,6 +125,18 @@
   .pipeline-status {
     font-size: 14px; color: var(--teal); background: #E8F5F5;
     padding: 3px 12px; border-radius: 12px;
+  }
+  .kicker {
+    font-size: 20px;
+    color: var(--slate);
+    margin-top: 24px;
+    line-height: 1.5;
+  }
+  .kicker-sm {
+    font-size: 16px;
+    color: var(--slate);
+    margin-top: 20px;
+    line-height: 1.5;
   }
 
   /* ---- DOCUMENT PAGES ---- */
@@ -224,131 +233,238 @@
 <body>
 
 <!-- ============================================================ -->
-<!-- SECTION 1: PITCH DECK                                        -->
+<!-- SECTION 1: PITCH DECK (12 SLIDES)                            -->
 <!-- ============================================================ -->
 <div class="section-divider">Section 1 of 4: Pitch Deck</div>
 
-<!-- SLIDE 1: Cover -->
+<!-- SLIDE 1: Title -->
 <div class="slide cover-slide">
   <div class="teal-bar"></div>
-  <h1>MedMerge</h1>
-  <p class="cover-slide subtitle">Economic coordination infrastructure for independent employers.</p>
-  <p class="cover-date">Confidential | April 2026</p>
+  <h1>MedMerge Collective</h1>
+  <p style="font-size:24px;color:var(--slate);margin-top:8px;">Cooperate on Costs. Compete on Customers.</p>
+  <p style="font-size:18px;color:var(--slate-gray);margin-top:12px;">Fragmentation is expensive. Coordination is leverage.</p>
+  <p class="cover-date">Raise: $3M SAFE | Confidential | April 2026</p>
 </div>
 
-<!-- SLIDE 2: The Independence Tax -->
+<!-- SLIDE 2: The Problem -->
 <div class="slide">
   <div class="teal-bar"></div>
-  <h2>The Independence Tax</h2>
-  <p style="font-size:20px;margin-bottom:24px;">Independent employers pay a structural penalty for staying independent.</p>
+  <h2>The Problem</h2>
+  <p style="font-size:20px;margin-bottom:24px;">Independent businesses are structurally disadvantaged.</p>
+  <p style="font-size:18px;color:var(--slate-gray);margin-bottom:16px;">They:</p>
   <ul>
-    <li>Physician practices, physician-owned hospitals, churches, and community banks send millions per year to insurance carriers across health, workers comp, med mal, and property and casualty</li>
-    <li>Carriers retain 15 to 30 percent as margin, invest the premium float, and book the underwriting surplus as equity on their balance sheets. UnitedHealth holds $25.5 billion of it. Elevance holds $40.3 billion.</li>
-    <li>Large employers eliminated this cost decades ago by self-funding. Small employers cannot, because they lack the infrastructure.</li>
-    <li>This is not an insurance problem. It is a capital allocation problem.</li>
+    <li>buy everything alone</li>
+    <li>negotiate everything alone</li>
+    <li>operate duplicated infrastructure</li>
   </ul>
+  <p class="kicker">Small businesses pay retail for what large companies buy at scale.</p>
+  <p class="kicker-sm">This is not a capability problem. It is a coordination problem.</p>
   <span class="logo-mark">MedMerge</span>
   <span class="slide-number">2</span>
 </div>
 
-<!-- SLIDE 3: The Model -->
+<!-- SLIDE 3: The Insight -->
 <div class="slide">
   <div class="teal-bar"></div>
-  <h2>The Model</h2>
-  <p style="font-size:20px;margin-bottom:24px;">Fiserv does not own a single bank. It owns what banks cannot operate without.</p>
+  <h2>The Insight</h2>
+  <p style="font-size:20px;margin-bottom:24px;">Large companies don't win because they're smarter.</p>
+  <p style="font-size:18px;color:var(--slate-gray);margin-bottom:16px;">They win because they:</p>
   <ul>
-    <li>MedMerge is the economic infrastructure layer between fragmented independent employers and the insurance market, across every line: health, workers comp, med mal, D&amp;O, E&amp;O, P&amp;C</li>
-    <li>Purchasing aggregation (GPO logic) fused with captive insurance economics (float, underwriting surplus) into a single infrastructure. Neither insight alone is sufficient. The fusion has not been executed at national scale.</li>
-    <li>MedMerge bears underwriting risk by design. Float and surplus belong to MedMerge, not the members.</li>
-    <li>PE buys the asset. MedMerge becomes the asset.</li>
+    <li>pool costs</li>
+    <li>centralize infrastructure</li>
+    <li>control economics</li>
   </ul>
+  <p class="kicker">Independent businesses have never had a way to do this together.</p>
+  <p class="kicker-sm">Compete externally. Cooperate internally.</p>
   <span class="logo-mark">MedMerge</span>
   <span class="slide-number">3</span>
 </div>
 
-<!-- SLIDE 4: How Money Moves -->
+<!-- SLIDE 4: The Solution -->
 <div class="slide">
   <div class="teal-bar"></div>
-  <h2>How Money Moves</h2>
-  <p style="font-size:20px;margin-bottom:24px;">Four revenue streams. Each compounds with scale.</p>
+  <h2>The Solution</h2>
+  <p style="font-size:20px;margin-bottom:24px;">MedMerge is a coordination platform for independent businesses.</p>
+  <p style="font-size:18px;color:var(--slate-gray);margin-bottom:16px;">We enable:</p>
   <ul>
-    <li><strong>PEPM platform fee:</strong> Per employee per month. Recurring. Contractual.</li>
-    <li><strong>Float:</strong> Premiums arrive at the start of the policy period. Claims are paid 30, 60, 90 days later. Investment income on the gap belongs to MedMerge. This is the mechanic Warren Buffett built Berkshire Hathaway on.</li>
-    <li><strong>Underwriting surplus:</strong> Retained margin after claims. Currently running below 25% loss ratio.</li>
-    <li><strong>Vendor relationship economics:</strong> Network access, pharmacy, stop-loss.</li>
+    <li>shared infrastructure</li>
+    <li>pooled purchasing</li>
+    <li>institutional pricing</li>
+    <li>retained economics</li>
   </ul>
-  <p style="margin-top:12px;font-size:16px;color:var(--slate);">The founder's line: "We do not buy practices. We make them unbuyable."</p>
+  <p class="kicker">We help small businesses act big without selling out.</p>
   <span class="logo-mark">MedMerge</span>
   <span class="slide-number">4</span>
 </div>
 
-<!-- SLIDE 5: Evidence and Pipeline -->
+<!-- SLIDE 5: What Actually Changes -->
 <div class="slide">
   <div class="teal-bar"></div>
-  <h2>Evidence</h2>
-  <div class="stat-row">
-    <div class="stat">
-      <div class="stat-number">237</div>
-      <div class="stat-label">Lives on plan</div>
+  <h2>What Actually Changes</h2>
+  <div class="two-col">
+    <div class="col">
+      <h3>Nothing Operational</h3>
+      <ul>
+        <li>same vendors</li>
+        <li>same systems</li>
+        <li>same risk</li>
+      </ul>
     </div>
-    <div class="stat">
-      <div class="stat-number">3</div>
-      <div class="stat-label">States</div>
+    <div class="col">
+      <h3>Everything Economic</h3>
+      <ul>
+        <li>who negotiates</li>
+        <li>who controls</li>
+        <li>who keeps the outcome</li>
+      </ul>
     </div>
-    <div class="stat">
-      <div class="stat-number">&lt;25%</div>
-      <div class="stat-label">Loss ratio</div>
-    </div>
-  </div>
-  <div style="margin-top:20px;">
-    <p style="font-size:15px;">Live in Arizona, Kansas, Louisiana. Chassis took 18 months to build on personal capital. Fully compliant and operational.</p>
-    <p style="margin-top:8px;font-size:15px;"><strong>Pipeline (active, nothing signed):</strong> OSU Health / Land Grant Collective (45 rural hospitals, statewide physician network). Nutex Health (27 facilities, 12 states, public company, $132M modeled Year 1 market cap impact). Physician Hospitals of America (~50 hospitals, Up-C formation path).</p>
   </div>
   <span class="logo-mark">MedMerge</span>
   <span class="slide-number">5</span>
 </div>
 
-<!-- SLIDE 6: The Raise -->
+<!-- SLIDE 6: Why It Wins (Gurley) -->
 <div class="slide">
   <div class="teal-bar"></div>
-  <h2>The Raise</h2>
-  <p style="font-size:20px;margin-bottom:20px;">$3M on a SAFE. Capital funds team, operations, captive formation, and distribution.</p>
-  <div class="terms-grid">
-    <div class="term-item"><div class="term-label-sm">Instrument</div><div class="term-value-sm">SAFE</div></div>
-    <div class="term-item"><div class="term-label-sm">Amount</div><div class="term-value-sm">$3,000,000</div></div>
-    <div class="term-item"><div class="term-label-sm">Coupon</div><div class="term-value-sm">8% annual, cash</div></div>
-    <div class="term-item"><div class="term-label-sm">Valuation Cap</div><div class="term-value-sm">$40M to $50M</div></div>
-    <div class="term-item"><div class="term-label-sm">Discount</div><div class="term-value-sm">20% at conversion</div></div>
-    <div class="term-item"><div class="term-label-sm">First Payment</div><div class="term-value-sm">January 1, 2027</div></div>
-  </div>
+  <h2>Why It Wins</h2>
+  <p style="font-size:20px;margin-bottom:24px;">The system improves as it scales.</p>
+  <ul>
+    <li>more members &rarr; stronger pricing</li>
+    <li>more data &rarr; better cost control</li>
+    <li>more density &rarr; stronger leverage</li>
+    <li>shared infrastructure &rarr; lower per-unit cost</li>
+  </ul>
+  <p class="kicker">Every new participant makes the network more valuable.</p>
   <span class="logo-mark">MedMerge</span>
   <span class="slide-number">6</span>
 </div>
 
-<!-- SLIDE 7: Why This Capital -->
+<!-- SLIDE 7: The System (Andreessen) -->
 <div class="slide">
   <div class="teal-bar"></div>
-  <h2>Why This Capital</h2>
+  <h2>The System</h2>
+  <p style="font-size:20px;margin-bottom:24px;">This is not services. This is a system.</p>
+  <ul>
+    <li>standardized onboarding (30 to 60 days)</li>
+    <li>unified data across participants</li>
+    <li>repeatable economic structures</li>
+    <li>centralized vendor orchestration</li>
+  </ul>
+  <p class="kicker">We turn fragmented businesses into a coordinated economic network.</p>
+  <span class="logo-mark">MedMerge</span>
+  <span class="slide-number">7</span>
+</div>
+
+<!-- SLIDE 8: The Economics (Gray) -->
+<div class="slide">
+  <div class="teal-bar"></div>
+  <h2>The Economics</h2>
+  <p style="font-size:20px;margin-bottom:24px;">Recurring expense becomes compounding capital.</p>
+  <ul>
+    <li>premium and expense flow aggregated</li>
+    <li>cost reduced through structure and scale</li>
+    <li>retained capital accumulates</li>
+    <li>float generates yield</li>
+  </ul>
+  <p class="kicker">What used to leave becomes owned.</p>
+  <span class="logo-mark">MedMerge</span>
+  <span class="slide-number">8</span>
+</div>
+
+<!-- SLIDE 9: Proof -->
+<div class="slide">
+  <div class="teal-bar"></div>
+  <h2>Proof</h2>
+  <div class="stat-row">
+    <div class="stat">
+      <div class="stat-number">237</div>
+      <div class="stat-label">Lives active</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">1,700</div>
+      <div class="stat-label">Lives contracted</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">3</div>
+      <div class="stat-label">States (AZ, KS, LA)</div>
+    </div>
+  </div>
+  <div style="margin-top:28px;">
+    <p>Fully compliant structure built. This is operating. Not conceptual.</p>
+  </div>
+  <span class="logo-mark">MedMerge</span>
+  <span class="slide-number">9</span>
+</div>
+
+<!-- SLIDE 10: Distribution -->
+<div class="slide">
+  <div class="teal-bar"></div>
+  <h2>Distribution</h2>
+  <p style="font-size:20px;margin-bottom:20px;">Three expansion vectors in motion.</p>
+  <div>
+    <div class="pipeline-item">
+      <span class="pipeline-name">OSU Health</span>
+      <span class="pipeline-status">Statewide Network</span>
+    </div>
+    <div class="pipeline-item">
+      <span class="pipeline-name">Nutex Health (Public)</span>
+      <span class="pipeline-status">27 Facilities</span>
+    </div>
+    <div class="pipeline-item">
+      <span class="pipeline-name">Physician Hospitals of America</span>
+      <span class="pipeline-status">50 Hospitals</span>
+    </div>
+  </div>
+  <p class="kicker-sm">Any one unlocks scale. All three create inevitability.</p>
+  <span class="logo-mark">MedMerge</span>
+  <span class="slide-number">10</span>
+</div>
+
+<!-- SLIDE 11: Market -->
+<div class="slide">
+  <div class="teal-bar"></div>
+  <h2>Market</h2>
+  <p style="font-size:20px;margin-bottom:24px;">Every fragmented industry has the same problem.</p>
+  <ul>
+    <li>healthcare</li>
+    <li>manufacturing</li>
+    <li>churches</li>
+    <li>retail</li>
+    <li>service businesses</li>
+  </ul>
+  <p class="kicker">The cost of operating alone.</p>
+  <p class="kicker-sm">This is not a healthcare company. This is a new economic model for independent business.</p>
+  <span class="logo-mark">MedMerge</span>
+  <span class="slide-number">11</span>
+</div>
+
+<!-- SLIDE 12: The Ask -->
+<div class="slide">
+  <div class="teal-bar"></div>
+  <h2>The Ask</h2>
+  <p style="font-size:20px;margin-bottom:20px;">Raising $3M SAFE.</p>
   <div class="two-col">
     <div class="col">
-      <h3>The Compounding</h3>
+      <h3>Use of Capital</h3>
       <ul>
-        <li>Regulatory moat: 18 months of compliance infrastructure already built on personal capital</li>
-        <li>Each employer added increases float, surplus, and PEPM. The infrastructure becomes more valuable with every deployment.</li>
-        <li>Permanent capital with a yield story. Coupon pays while investors wait. No exit required. Berkshire does not sell the float.</li>
+        <li>scale team and infrastructure</li>
+        <li>support distribution deals</li>
+        <li>prepare captive capitalization</li>
       </ul>
     </div>
     <div class="col">
-      <h3>The Operator</h3>
+      <h3>Terms</h3>
       <ul>
-        <li>Built the chassis, put 237 lives on plan across three states, running below 25% loss ratio</li>
-        <li>Understands both the capital structure and the regulatory architecture from the inside</li>
-        <li>You know Dutch. That is what this bet is about.</li>
+        <li>8% coupon</li>
+        <li>$40 to $50M cap</li>
+        <li>20% discount</li>
+        <li>MFN</li>
       </ul>
     </div>
   </div>
+  <p class="kicker-sm">This is not proving the model. This is scaling it.</p>
   <span class="logo-mark">MedMerge</span>
-  <span class="slide-number">7</span>
+  <span class="slide-number">12</span>
 </div>
 
 
@@ -359,43 +475,42 @@
 
 <div class="doc-page" style="max-width:800px;">
   <div class="doc-header">
-    <h1>MedMerge</h1>
+    <h1>MedMerge Collective</h1>
     <span class="date">Confidential | April 2026</span>
   </div>
 
-  <div class="doc-section-title">Thesis</div>
-  <p>Independent employers pay a structural premium for insurance because they are too small to access the wholesale structures that large employers have used for decades. Carriers retain the margin, invest the float, and book the underwriting surplus as equity on their own balance sheets. UnitedHealth holds $25.5 billion of it. Elevance holds $40.3 billion. The employers who funded it own none of it.</p>
-  <p>MedMerge eliminates this cost. It is the economic infrastructure layer between fragmented independent employers and the insurance market across every line: health benefits, workers compensation, medical malpractice, directors and officers, errors and omissions, property and casualty. Purchasing aggregation fused with captive insurance economics into a single platform. Neither insight alone is sufficient. The fusion has not been executed at national scale.</p>
-  <p>The founder's line: "We do not buy practices. We make them unbuyable."</p>
+  <div class="doc-section-title">What MedMerge Is</div>
+  <p>A coordination platform for independent businesses. MedMerge enables shared infrastructure, pooled purchasing, institutional pricing, and retained economics across fragmented employers who have never had a way to achieve scale economics without selling out.</p>
+  <p>Small businesses pay retail for what large companies buy at scale. This is not a capability problem. It is a coordination problem. MedMerge solves it.</p>
 
-  <div class="doc-section-title">How Money Moves</div>
-  <p>Premiums arrive at the beginning of the policy period. Claims are paid 30, 60, 90 days later. In that gap, carriers hold the money and invest it. The returns belong to the carrier. Warren Buffett built Berkshire Hathaway on this mechanic. MedMerge redirects it.</p>
-  <p>MedMerge bears underwriting risk by design. Float and surplus belong to MedMerge, not the members. Four revenue streams compound with scale: PEPM platform fees, float (investment income on premium during claims lag), underwriting surplus (retained margin after claims), and vendor relationship economics.</p>
+  <div class="doc-section-title">How It Works</div>
+  <p>Nothing operational changes. Everything economic changes. The businesses keep the same vendors, systems, and risk. What changes: who negotiates, who controls, and who keeps the outcome. Premium and expense flow is aggregated. Costs are reduced through structure and scale. Retained capital accumulates. Float generates yield.</p>
 
-  <div class="doc-section-title">The Infrastructure Analogy</div>
-  <p>Fiserv does not own a single bank. It owns what banks cannot operate without. Each bank on the Fiserv network is independent. Migration away means rebuilding core operations from scratch. The banks stay. The economics flow to Fiserv.</p>
-  <p>MedMerge is the Fiserv position applied to independent medicine, physician-owned hospitals, churches, and community banks. At maturity: billions in premium under management, hundreds of millions in retained surplus, permanent capital base, network effects that widen with time. PE buys the asset. MedMerge becomes the asset.</p>
+  <div class="doc-section-title">Why It Compounds</div>
+  <p>More members create stronger pricing. More data creates better cost control. More density creates stronger leverage. Shared infrastructure lowers per-unit cost. Every new participant makes the network more valuable. What used to leave becomes owned.</p>
 
-  <div class="doc-section-title">Evidence</div>
+  <div class="doc-section-title">Proof</div>
   <div class="two-col" style="margin-top:8px;">
     <div class="col">
       <ul>
-        <li>237 lives on plan</li>
-        <li>Live in Arizona, Kansas, Louisiana</li>
-        <li>Running below 25% loss ratio</li>
-        <li>Chassis fully compliant and operational</li>
-        <li>18 months to build, funded by the founder</li>
+        <li>237 lives active</li>
+        <li>1,700 lives contracted</li>
+        <li>Multi-state deployment (AZ, KS, LA)</li>
+        <li>Fully compliant structure built</li>
       </ul>
     </div>
     <div class="col">
       <ul>
-        <li>OSU Health / Land Grant Collective: 45 rural hospitals, statewide physician network</li>
-        <li>Nutex Health (NUTX): 27 facilities, 12 states, $132M modeled Year 1 impact</li>
-        <li>PHA: ~50 hospitals, Up-C formation path</li>
-        <li>Active conversations, nothing signed</li>
+        <li>OSU Health: statewide network</li>
+        <li>Nutex Health (public): 27 facilities</li>
+        <li>PHA: 50 hospitals</li>
+        <li>Any one unlocks scale. All three create inevitability.</li>
       </ul>
     </div>
   </div>
+
+  <div class="doc-section-title">Market</div>
+  <p>Every fragmented industry has the same problem: healthcare, manufacturing, churches, retail, service businesses. The cost of operating alone. This is not a healthcare company. This is a new economic model for independent business.</p>
 
   <div class="doc-section-title">Deal Terms</div>
   <table class="terms-table">
@@ -410,10 +525,7 @@
   </table>
 
   <div class="doc-section-title">Use of Capital</div>
-  <p>Team build-out (12 months), operations overhead (12 months), captive formation prep (legal, consulting, domicile selection), distribution deals across the finish line, and buffer. This raise does not fund proving the model or building the chassis. Both are done. It funds hiring the team to operate what is already built.</p>
-
-  <div class="doc-section-title">The Return Story</div>
-  <p>This is permanent capital with a yield story. The 8% coupon pays cash while investors wait. The valuation cap protects upside at conversion. The model compounds: float, surplus, network effects. No exit required. Berkshire does not sell the float.</p>
+  <p>Scale team and infrastructure. Support distribution deals across the finish line. Prepare captive capitalization. This is not proving the model. This is scaling it.</p>
 
   <div class="footer">Confidential. For discussion purposes only. Not an offer to sell securities.</div>
 </div>
@@ -426,7 +538,7 @@
 
 <div class="doc-page">
   <div class="doc-header">
-    <h1 style="font-size:24px;">MedMerge | Investor Return Analysis</h1>
+    <h1 style="font-size:24px;">MedMerge Collective | Return Analysis</h1>
     <span class="date">Confidential | April 2026</span>
   </div>
 
@@ -442,7 +554,7 @@
   </div>
 
   <div class="doc-section-title">Coupon Cash Flow</div>
-  <p>The 8% coupon accrues from close and pays cash annually. This is capital returned regardless of conversion outcome.</p>
+  <p>The 8% coupon accrues from close and pays cash annually. Capital returned regardless of conversion outcome.</p>
 
   <table class="pf-table">
     <thead>
@@ -493,59 +605,59 @@
   <p class="note">Coupon calculated as $3,000,000 x 8% x (months / 12). Total cash returned before conversion: $720,000.</p>
 
   <div class="doc-section-title">Conversion Scenarios</div>
-  <p style="font-size:13.5px;">At a priced round, the SAFE converts at the lower of the valuation cap or a 20% discount to the Series A price. The cap determines equity allocation. A lower cap means more ownership for the same capital deployed.</p>
+  <p style="font-size:13.5px;">At a priced round, the SAFE converts at the lower of the valuation cap or a 20% discount to the Series A price. The cap determines equity allocation.</p>
 
   <div class="conversion-grid">
     <div class="conversion-card">
       <h3>$40M Cap / $75M Series A</h3>
       <table>
-        <tr><td>Cap conversion price</td><td class="num">$40M</td></tr>
-        <tr><td>Discount conversion price</td><td class="num">$60M</td></tr>
-        <tr><td>Investor converts at</td><td class="num"><strong>$40M (cap)</strong></td></tr>
-        <tr><td>Effective ownership</td><td class="num">7.50%</td></tr>
-        <tr><td>Equity value at $75M</td><td class="num">$5,625,000</td></tr>
-        <tr><td>Coupon payments received</td><td class="num">$720,000</td></tr>
+        <tr><td>Cap conversion</td><td class="num">$40M</td></tr>
+        <tr><td>Discount conversion</td><td class="num">$60M</td></tr>
+        <tr><td>Converts at</td><td class="num"><strong>$40M (cap)</strong></td></tr>
+        <tr><td>Ownership</td><td class="num">7.50%</td></tr>
+        <tr><td>Equity value</td><td class="num">$5,625,000</td></tr>
+        <tr><td>Coupon received</td><td class="num">$720,000</td></tr>
         <tr class="highlight-row"><td>Total return</td><td class="num">$6,345,000</td></tr>
-        <tr class="highlight-row"><td>Multiple on invested</td><td class="num">2.12x</td></tr>
+        <tr class="highlight-row"><td>Multiple</td><td class="num">2.12x</td></tr>
       </table>
     </div>
     <div class="conversion-card">
       <h3>$40M Cap / $100M Series A</h3>
       <table>
-        <tr><td>Cap conversion price</td><td class="num">$40M</td></tr>
-        <tr><td>Discount conversion price</td><td class="num">$80M</td></tr>
-        <tr><td>Investor converts at</td><td class="num"><strong>$40M (cap)</strong></td></tr>
-        <tr><td>Effective ownership</td><td class="num">7.50%</td></tr>
-        <tr><td>Equity value at $100M</td><td class="num">$7,500,000</td></tr>
-        <tr><td>Coupon payments received</td><td class="num">$720,000</td></tr>
+        <tr><td>Cap conversion</td><td class="num">$40M</td></tr>
+        <tr><td>Discount conversion</td><td class="num">$80M</td></tr>
+        <tr><td>Converts at</td><td class="num"><strong>$40M (cap)</strong></td></tr>
+        <tr><td>Ownership</td><td class="num">7.50%</td></tr>
+        <tr><td>Equity value</td><td class="num">$7,500,000</td></tr>
+        <tr><td>Coupon received</td><td class="num">$720,000</td></tr>
         <tr class="highlight-row"><td>Total return</td><td class="num">$8,220,000</td></tr>
-        <tr class="highlight-row"><td>Multiple on invested</td><td class="num">2.74x</td></tr>
+        <tr class="highlight-row"><td>Multiple</td><td class="num">2.74x</td></tr>
       </table>
     </div>
     <div class="conversion-card">
       <h3>$50M Cap / $75M Series A</h3>
       <table>
-        <tr><td>Cap conversion price</td><td class="num">$50M</td></tr>
-        <tr><td>Discount conversion price</td><td class="num">$60M</td></tr>
-        <tr><td>Investor converts at</td><td class="num"><strong>$50M (cap)</strong></td></tr>
-        <tr><td>Effective ownership</td><td class="num">6.00%</td></tr>
-        <tr><td>Equity value at $75M</td><td class="num">$4,500,000</td></tr>
-        <tr><td>Coupon payments received</td><td class="num">$720,000</td></tr>
+        <tr><td>Cap conversion</td><td class="num">$50M</td></tr>
+        <tr><td>Discount conversion</td><td class="num">$60M</td></tr>
+        <tr><td>Converts at</td><td class="num"><strong>$50M (cap)</strong></td></tr>
+        <tr><td>Ownership</td><td class="num">6.00%</td></tr>
+        <tr><td>Equity value</td><td class="num">$4,500,000</td></tr>
+        <tr><td>Coupon received</td><td class="num">$720,000</td></tr>
         <tr class="highlight-row"><td>Total return</td><td class="num">$5,220,000</td></tr>
-        <tr class="highlight-row"><td>Multiple on invested</td><td class="num">1.74x</td></tr>
+        <tr class="highlight-row"><td>Multiple</td><td class="num">1.74x</td></tr>
       </table>
     </div>
     <div class="conversion-card">
       <h3>$50M Cap / $100M Series A</h3>
       <table>
-        <tr><td>Cap conversion price</td><td class="num">$50M</td></tr>
-        <tr><td>Discount conversion price</td><td class="num">$80M</td></tr>
-        <tr><td>Investor converts at</td><td class="num"><strong>$50M (cap)</strong></td></tr>
-        <tr><td>Effective ownership</td><td class="num">6.00%</td></tr>
-        <tr><td>Equity value at $100M</td><td class="num">$6,000,000</td></tr>
-        <tr><td>Coupon payments received</td><td class="num">$720,000</td></tr>
+        <tr><td>Cap conversion</td><td class="num">$50M</td></tr>
+        <tr><td>Discount conversion</td><td class="num">$80M</td></tr>
+        <tr><td>Converts at</td><td class="num"><strong>$50M (cap)</strong></td></tr>
+        <tr><td>Ownership</td><td class="num">6.00%</td></tr>
+        <tr><td>Equity value</td><td class="num">$6,000,000</td></tr>
+        <tr><td>Coupon received</td><td class="num">$720,000</td></tr>
         <tr class="highlight-row"><td>Total return</td><td class="num">$6,720,000</td></tr>
-        <tr class="highlight-row"><td>Multiple on invested</td><td class="num">2.24x</td></tr>
+        <tr class="highlight-row"><td>Multiple</td><td class="num">2.24x</td></tr>
       </table>
     </div>
   </div>
@@ -559,20 +671,20 @@
     <div class="summary-stat">
       <span class="label">Cash While You Wait</span>
       <span class="value">$720K</span>
-      <span class="sub">coupon payments over 3 years</span>
+      <span class="sub">coupon over 3 years</span>
     </div>
     <div class="summary-stat">
       <span class="label">Cap Spread</span>
       <span class="value">1.50%</span>
-      <span class="sub">ownership difference ($40M vs $50M)</span>
+      <span class="sub">ownership ($40M vs $50M)</span>
     </div>
   </div>
 
   <div class="doc-section-title">Reading the Numbers</div>
-  <p style="font-size:13.5px;">The cap is the binding term. At a $40M cap, investors own 7.50% at conversion. At a $50M cap, 6.00%. That 1.50 percentage point spread is worth $1,125,000 at a $75M Series A and $1,500,000 at a $100M Series A. In every scenario shown, the cap delivers a better price than the 20% discount.</p>
-  <p style="font-size:13.5px;">The coupon returns $720,000 in cash over three years regardless of conversion outcome. That is 24% cash-on-cash on invested capital before any equity upside is realized. This is permanent capital with a yield story. The model compounds. No exit required.</p>
+  <p style="font-size:13.5px;">The cap is the binding term. At $40M, investors own 7.50%. At $50M, 6.00%. That spread is worth $1.1M to $1.5M depending on Series A price. In every scenario, the cap delivers a better price than the discount.</p>
+  <p style="font-size:13.5px;">The coupon returns $720,000 in cash over three years. That is 24% cash-on-cash before equity upside.</p>
 
-  <div class="footer">Illustrative only. Actual returns depend on timing, Series A terms, and dilution. Not an offer to sell securities.</div>
+  <div class="footer">Illustrative only. Actual returns depend on timing, terms, and dilution. Not an offer to sell securities.</div>
 </div>
 
 
